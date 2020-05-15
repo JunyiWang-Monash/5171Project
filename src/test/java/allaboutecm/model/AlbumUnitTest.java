@@ -307,7 +307,7 @@ class AlbumUnitTest {
         album.setSales(400);
         assertEquals(400, album.getSales());
     }
-
+    //adding this method to test
     @Test
     @DisplayName("Test set invalid sales")
     public void testSetInValidSales(){

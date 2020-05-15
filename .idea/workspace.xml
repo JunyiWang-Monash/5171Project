@@ -2,9 +2,213 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c650e90-aacb-4562-bd4d-d1e43bc6ee9e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/testing_assignment2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/allaboutecm/mining/ECMMiner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/allaboutecm/mining/ECMMiner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/allaboutecm/mining/ECMMinerIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/allaboutecm/mining/ECMMinerIntegrationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/allaboutecm/mining/ECMMinerUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/allaboutecm/mining/ECMMinerUnitTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/allaboutecm/model/AlbumUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/allaboutecm/model/AlbumUnitTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_9_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_9_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__com_github_ben_manes_caffeine_caffeine_2_3_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__com_github_luben_zstd_jni_1_3_8_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__com_google_code_findbugs_jsr305_3_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_3_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__com_google_guava_failureaccess_1_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__com_google_guava_guava_28_2_jre.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__com_google_guava_listenablefuture_9999_0_empty_to_avoid_conflict_with_guava.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__com_google_j2objc_j2objc_annotations_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__com_googlecode_concurrentlinkedhashmap_concurrentlinkedhashmap_lru_1_4_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__com_profesorfalken_WMI4Java_1_6_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__com_profesorfalken_jPowerShell_1_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__commons_codec_commons_codec_1_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__io_github_classgraph_classgraph_4_8_64.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__io_netty_netty_all_4_1_48_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_10_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_10_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__net_sf_opencsv_opencsv_2_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_apache_commons_commons_compress_1_19.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_apache_commons_commons_csv_1_8.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_10.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_apache_commons_commons_text_1_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_13_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_apache_logging_log4j_log4j_core_2_13_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_apache_logging_log4j_log4j_slf4j_impl_2_13_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_apache_lucene_lucene_analyzers_common_5_5_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_apache_lucene_lucene_codecs_5_5_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_apache_lucene_lucene_core_5_5_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_apache_lucene_lucene_queryparser_5_5_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_bouncycastle_bcpkix_jdk15on_1_64.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_bouncycastle_bcprov_jdk15on_1_64.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_checkerframework_checker_qual_2_10_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_eclipse_collections_eclipse_collections_9_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_eclipse_collections_eclipse_collections_api_9_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_jprocesses_jProcesses_1_6_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_6_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_6_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_6_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_6_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_6_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_mockito_mockito_core_3_3_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_driver_neo4j_java_driver_1_7_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_licensing_proxy_zstd_proxy_3_5_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_3_5_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_annotation_processors_3_5_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_ast_3_5_3_5_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_bolt_3_5_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_codegen_3_5_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_collections_3_5_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_command_line_3_5_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_common_3_5_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_concurrent_3_5_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_configuration_3_5_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_consistency_check_3_5_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_csv_3_5_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_cypher_3_5_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_cypher_compiler_2_3_2_3_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_cypher_compiler_3_1_3_1_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_cypher_expression_3_4_3_4_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_cypher_frontend_2_3_2_3_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_cypher_frontend_3_1_3_1_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_cypher_interpreted_runtime_3_5_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_cypher_ir_3_4_3_4_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_cypher_ir_3_5_3_5_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_cypher_logical_plans_3_4_3_4_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_cypher_logical_plans_3_5_3_5_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_cypher_planner_3_4_3_4_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_cypher_planner_3_5_3_5_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_cypher_planner_spi_3_4_3_4_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_cypher_planner_spi_3_5_3_5_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_cypher_runtime_util_3_5_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_cypher_util_3_4_3_4_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_data_collector_3_5_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_dbms_3_5_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_diagnostics_3_5_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_expressions_3_5_3_5_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_front_end_3_5_3_5_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_fulltext_index_3_5_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_graph_algo_3_5_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_graph_matching_3_1_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_graphdb_api_3_5_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_import_tool_3_5_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_index_3_5_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_io_3_5_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_jmx_3_5_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_kernel_3_5_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_kernel_api_3_5_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_legacy_3_5_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_logging_3_5_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_lucene_index_3_5_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_lucene_upgrade_3_5_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_ogm_api_3_2_10.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_ogm_core_3_2_10.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_ogm_embedded_driver_3_2_10.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_ogm_http_driver_3_2_10.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_parser_3_5_3_5_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_procedure_api_3_5_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_resource_3_5_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_rewriting_3_5_3_5_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_spatial_index_3_5_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_ssl_3_5_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_udc_3_5_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_unsafe_3_5_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_util_3_5_3_5_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_neo4j_values_3_5_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_neo4j_openCypher_frontend_1_3_4_17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_objenesis_objenesis_2_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_ow2_asm_asm_6_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_ow2_asm_asm_analysis_6_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_ow2_asm_asm_tree_6_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_ow2_asm_asm_util_6_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_parboiled_parboiled_core_1_1_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_parboiled_parboiled_scala_2_11_1_1_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_scala_lang_scala_library_2_11_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_scala_lang_scala_reflect_2_11_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/fit5171-2020-13.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/src/main/java/allaboutecm/dataaccess/DAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/src/main/java/allaboutecm/dataaccess/neo4j/Neo4jDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/src/main/java/allaboutecm/dataaccess/neo4j/URLConverter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/src/main/java/allaboutecm/mining/ECMMiner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/src/main/java/allaboutecm/model/Album.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/src/main/java/allaboutecm/model/Entity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/src/main/java/allaboutecm/model/MusicalInstrument.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/src/main/java/allaboutecm/model/Musician.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/src/main/java/allaboutecm/model/MusicianInstrument.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/src/main/java/allaboutecm/model/Review.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/src/main/java/allaboutecm/model/Track.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/src/main/resources/log4j2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/src/test/java/allaboutecm/dataaccess/neo4j/Neo4jDAOUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/src/test/java/allaboutecm/mining/ECMMinerIntegrationTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/src/test/java/allaboutecm/mining/ECMMinerUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/src/test/java/allaboutecm/model/AlbumUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/src/test/java/allaboutecm/model/MusicalInstrumentUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/src/test/java/allaboutecm/model/MusicianInstrumentUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/src/test/java/allaboutecm/model/MusicianUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/src/test/java/allaboutecm/model/ReviewUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/src/test/java/allaboutecm/model/TrackUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/target/classes/allaboutecm/dataaccess/DAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/target/classes/allaboutecm/dataaccess/neo4j/Neo4jDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/target/classes/allaboutecm/dataaccess/neo4j/URLConverter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/target/classes/allaboutecm/mining/ECMMiner.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/target/classes/allaboutecm/model/Album.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/target/classes/allaboutecm/model/Entity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/target/classes/allaboutecm/model/MusicalInstrument.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/target/classes/allaboutecm/model/Musician.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/target/classes/allaboutecm/model/MusicianInstrument.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/target/classes/allaboutecm/model/Review.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/target/classes/allaboutecm/model/Track.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/target/classes/log4j2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/target/surefire-reports/TEST-allaboutecm.dataaccess.neo4j.Neo4jDAOUnitTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/target/surefire-reports/TEST-allaboutecm.mining.ECMMinerUnitTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/target/surefire-reports/TEST-allaboutecm.model.AlbumUnitTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/target/surefire-reports/TEST-allaboutecm.model.MusicalInstrumentUnitTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/target/surefire-reports/TEST-allaboutecm.model.MusicianInstrumentUnitTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/target/surefire-reports/TEST-allaboutecm.model.MusicianUnitTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/target/surefire-reports/TEST-allaboutecm.model.ReviewUnitTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/target/surefire-reports/TEST-allaboutecm.model.TrackUnitTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/target/surefire-reports/allaboutecm.dataaccess.neo4j.Neo4jDAOUnitTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/target/surefire-reports/allaboutecm.mining.ECMMinerUnitTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/target/surefire-reports/allaboutecm.model.AlbumUnitTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/target/surefire-reports/allaboutecm.model.MusicalInstrumentUnitTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/target/surefire-reports/allaboutecm.model.MusicianInstrumentUnitTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/target/surefire-reports/allaboutecm.model.MusicianUnitTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/target/surefire-reports/allaboutecm.model.ReviewUnitTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/target/surefire-reports/allaboutecm.model.TrackUnitTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/target/test-classes/allaboutecm/dataaccess/neo4j/Neo4jDAOUnitTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/target/test-classes/allaboutecm/mining/ECMMinerIntegrationTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/target/test-classes/allaboutecm/mining/ECMMinerUnitTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/target/test-classes/allaboutecm/model/AlbumUnitTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/target/test-classes/allaboutecm/model/MusicalInstrumentUnitTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/target/test-classes/allaboutecm/model/MusicianInstrumentUnitTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/target/test-classes/allaboutecm/model/MusicianUnitTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/target/test-classes/allaboutecm/model/ReviewUnitTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/target/test-classes/allaboutecm/model/TrackUnitTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,81 +232,82 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
-  <component name="RunManager" selected="JUnit.AlbumUnitTest.testSetInValidSales">
-    <configuration name="AlbumUnitTest.testSetInValidSales" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ECMMinerIntegrationTest.shouldNotReturnTheHighestRatedAlbumsWhenOnlyOneAlbum">
+    <configuration name="ECMMinerIntegrationTest.shouldNotReturnTheHighestRatedAlbumsWhenKIsZero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="fit5171-2020-13" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="allaboutecm.model.*" />
+          <option name="PATTERN" value="allaboutecm.mining.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="allaboutecm.model" />
-      <option name="MAIN_CLASS_NAME" value="allaboutecm.model.AlbumUnitTest" />
-      <option name="METHOD_NAME" value="testSetInValidSales" />
+      <option name="PACKAGE_NAME" value="allaboutecm.mining" />
+      <option name="MAIN_CLASS_NAME" value="allaboutecm.mining.ECMMinerIntegrationTest" />
+      <option name="METHOD_NAME" value="shouldNotReturnTheHighestRatedAlbumsWhenKIsZero" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AlbumUnitTest.testSetValidSales" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ECMMinerIntegrationTest.shouldNotReturnTheHighestRatedAlbumsWhenOnlyOneAlbum" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="fit5171-2020-13" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="allaboutecm.model.*" />
+          <option name="PATTERN" value="allaboutecm.mining.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="allaboutecm.model" />
-      <option name="MAIN_CLASS_NAME" value="allaboutecm.model.AlbumUnitTest" />
-      <option name="METHOD_NAME" value="testSetValidSales" />
+      <option name="PACKAGE_NAME" value="allaboutecm.mining" />
+      <option name="MAIN_CLASS_NAME" value="allaboutecm.mining.ECMMinerIntegrationTest" />
+      <option name="METHOD_NAME" value="shouldNotReturnTheHighestRatedAlbumsWhenOnlyOneAlbum" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Neo4jDAOUnitTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ECMMinerIntegrationTest.shouldReturnTheHighestRatedAlbums" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="fit5171-2020-13" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="allaboutecm.dataaccess.neo4j.*" />
+          <option name="PATTERN" value="allaboutecm.mining.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="allaboutecm.dataaccess.neo4j" />
-      <option name="MAIN_CLASS_NAME" value="allaboutecm.dataaccess.neo4j.Neo4jDAOUnitTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Neo4jDAOUnitTest.successfulDeleteOfMusicalInstrument" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="fit5171-2020-13" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="allaboutecm.dataaccess.neo4j.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="allaboutecm.dataaccess.neo4j" />
-      <option name="MAIN_CLASS_NAME" value="allaboutecm.dataaccess.neo4j.Neo4jDAOUnitTest" />
-      <option name="METHOD_NAME" value="successfulDeleteOfMusicalInstrument" />
+      <option name="PACKAGE_NAME" value="allaboutecm.mining" />
+      <option name="MAIN_CLASS_NAME" value="allaboutecm.mining.ECMMinerIntegrationTest" />
+      <option name="METHOD_NAME" value="shouldReturnTheHighestRatedAlbums" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Neo4jDAOUnitTest.successfulSearchOfMusicalInstrument" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ECMMinerUnitTest.shouldNotReturnTheHighestRatedAlbumsWhenKIsZero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="fit5171-2020-13" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="allaboutecm.dataaccess.neo4j.*" />
+          <option name="PATTERN" value="allaboutecm.mining.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="allaboutecm.dataaccess.neo4j" />
-      <option name="MAIN_CLASS_NAME" value="allaboutecm.dataaccess.neo4j.Neo4jDAOUnitTest" />
-      <option name="METHOD_NAME" value="successfulSearchOfMusicalInstrument" />
+      <option name="PACKAGE_NAME" value="allaboutecm.mining" />
+      <option name="MAIN_CLASS_NAME" value="allaboutecm.mining.ECMMinerUnitTest" />
+      <option name="METHOD_NAME" value="shouldNotReturnTheHighestRatedAlbumsWhenKIsZero" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ECMMinerUnitTest.shouldNotReturnTheHighestRatedAlbumsWhenOnlyOneAlbum" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="fit5171-2020-13" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="allaboutecm.mining.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="allaboutecm.mining" />
+      <option name="MAIN_CLASS_NAME" value="allaboutecm.mining.ECMMinerUnitTest" />
+      <option name="METHOD_NAME" value="shouldNotReturnTheHighestRatedAlbumsWhenOnlyOneAlbum" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -110,11 +315,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AlbumUnitTest.testSetInValidSales" />
-        <item itemvalue="JUnit.Neo4jDAOUnitTest" />
-        <item itemvalue="JUnit.AlbumUnitTest.testSetValidSales" />
-        <item itemvalue="JUnit.Neo4jDAOUnitTest.successfulSearchOfMusicalInstrument" />
-        <item itemvalue="JUnit.Neo4jDAOUnitTest.successfulDeleteOfMusicalInstrument" />
+        <item itemvalue="JUnit.ECMMinerIntegrationTest.shouldNotReturnTheHighestRatedAlbumsWhenOnlyOneAlbum" />
+        <item itemvalue="JUnit.ECMMinerUnitTest.shouldNotReturnTheHighestRatedAlbumsWhenOnlyOneAlbum" />
+        <item itemvalue="JUnit.ECMMinerIntegrationTest.shouldNotReturnTheHighestRatedAlbumsWhenKIsZero" />
+        <item itemvalue="JUnit.ECMMinerUnitTest.shouldNotReturnTheHighestRatedAlbumsWhenKIsZero" />
+        <item itemvalue="JUnit.ECMMinerIntegrationTest.shouldReturnTheHighestRatedAlbums" />
       </list>
     </recent_temporary>
   </component>
@@ -147,6 +352,9 @@
       <workItem from="1589520595382" duration="24000" />
       <workItem from="1589520787736" duration="721000" />
       <workItem from="1589524186594" duration="548000" />
+      <workItem from="1589524894726" duration="654000" />
+      <workItem from="1589529937588" duration="766000" />
+      <workItem from="1589531125867" duration="6134000" />
     </task>
     <servers />
   </component>
@@ -158,22 +366,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1589521022630" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1589524737697">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1589537294914">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589524737697" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1589524737697">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589537294914" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1589537294914">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1589524737697" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1589524737697">
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1589537294914" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1589537294914">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1589524737697" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1589524737697">
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1589537294914" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1589537294914">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1589524737697" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1589537294914" />
     <state width="1493" height="269" key="GridCell.Tab.1.bottom" timestamp="1589513576965">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -194,9 +402,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1589524238235" />
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1589520597053">
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1589531130294">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1589520597053" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1589531130294" />
   </component>
 </project>

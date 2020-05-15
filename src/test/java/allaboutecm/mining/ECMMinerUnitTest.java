@@ -2,13 +2,11 @@ package allaboutecm.mining;
 
 import allaboutecm.dataaccess.DAO;
 import allaboutecm.dataaccess.neo4j.Neo4jDAO;
-import allaboutecm.model.Album;
-import allaboutecm.model.MusicalInstrument;
-import allaboutecm.model.Musician;
-import allaboutecm.model.MusicianInstrument;
+import allaboutecm.model.*;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -151,6 +149,111 @@ class ECMMinerUnitTest {
         assertEquals(1, musicians.size());
         assertTrue(musicians.contains(musician));
 
+    }
+    // Extra Credit
+    @DisplayName("Should return the best-selling albums when there is only one")
+    @Test
+    public void shouldReturnTheBestSellingAlbumsWhenThereIsOnlyOne() {
+        Album album = new Album(1975, "ECM 1064/65", "The Köln Concert");
+        album.setSales(50);
+        when(dao.loadAll(Album.class)).thenReturn(Sets.newHashSet(album));;
+        List<Album> albums = ecmMiner.bestSellingAlbums(3);
+        assertEquals(50,albums.iterator().next().getSales());
+    }
+    // Extra Credit
+    @DisplayName("Should not return the best-selling albums when k is 0")
+    @Test
+    public void shouldNotReturnTheBestSellingAlbumsWhenKIsZero() {
+        Album album = new Album(1975, "ECM 1064/65", "The Köln Concert");
+        album.setSales(50);
+        Set<Album> albums = Sets.newHashSet();
+        albums.add(album);
+        when(dao.loadAll(Album.class)).thenReturn(albums);
+        List<Album> albums1 = ecmMiner.bestSellingAlbums(0);
+        assertEquals(0,albums1.size());
+    }
+    // Extra Credit
+    @DisplayName("Should return the best-selling albums")
+    @Test
+    public void shouldReturnTheBestSellingAlbums() {
+        Album album = new Album(1975, "ECM 1064/65", "The Köln Concert");
+        Album album1 = new Album(1974, "ECM 1080", "The Köln Concert 12");
+        Album album2 = new Album(1973, "ECM 1090", "The Köln Concert 13");
+        album.setSales(500);
+        album1.setSales(1000);
+        album2.setSales(2000);
+        Set<Album> albums = Sets.newHashSet();
+        albums.add(album);
+        albums.add(album1);
+        albums.add(album2);
+        when(dao.loadAll(Album.class)).thenReturn(albums);
+        List<Album> albums1 = ecmMiner.bestSellingAlbums(2);
+        assertEquals(2,albums1.size());
+        assertEquals(2000,albums1.get(0).getSales());
+        assertEquals(1000,albums1.get(1).getSales());
+    }
 
+    // Extra Credit
+    @DisplayName("Should return the highest rated albums")
+    @Test
+    public void shouldReturnTheHighestRatedAlbums() {
+        Album album = new Album(1975, "ECM 1064/65", "The Köln Concert");
+        Album album1 = new Album(2020, "ECM 2679", "Swallow tales");
+        Set<Review> reviews = Sets.newHashSet();
+        Review review = new Review("Very nice",9);
+        Review review1 = new Review("Very good",8);
+        reviews.add(review);
+        reviews.add(review1);
+        album.setReviews(reviews);
+        Set<Review> reviews1 = Sets.newHashSet();
+        Review review2 = new Review("Very nice and good",9);
+        Review review3 = new Review("Very good and inter",9);
+        reviews1.add(review2);
+        reviews1.add(review3);
+        album1.setReviews(reviews1);
+        Set<Album> albums = Sets.newHashSet();
+        albums.add(album);
+        albums.add(album1);
+        when(dao.loadAll(Album.class)).thenReturn(albums);
+        List<Album> albums1 = ecmMiner.highestRatedAlbums(1);
+        assertEquals(1,albums1.size());
+        assertEquals("Swallow tales",albums1.get(0).getAlbumName());
+    }
+
+    // Extra Credit
+    @DisplayName("Should not return the highest rated albums when k is 0")
+    @Test
+    public void shouldNotReturnTheHighestRatedAlbumsWhenKIsZero() {
+        Album album = new Album(1975, "ECM 1064/65", "The Köln Concert");
+        Set<Review> reviews = Sets.newHashSet();
+        Review review = new Review("Very nice",9);
+        Review review1 = new Review("Very good",8);
+        reviews.add(review);
+        reviews.add(review1);
+        album.setReviews(reviews);
+        Set<Album> albums = Sets.newHashSet();
+        albums.add(album);
+        when(dao.loadAll(Album.class)).thenReturn(albums);
+        List<Album> albums1 = ecmMiner.highestRatedAlbums(0);
+        assertEquals(0,albums1.size());
+    }
+
+    // Extra Credit
+    @DisplayName("Should return the highest rated albums when only one album")
+    @Test
+    public void shouldNotReturnTheHighestRatedAlbumsWhenOnlyOneAlbum() {
+        Album album = new Album(1975, "ECM 1064/65", "The Köln Concert");
+        Set<Review> reviews = Sets.newHashSet();
+        Review review = new Review("Very nice",9);
+        Review review1 = new Review("Very good",8);
+        reviews.add(review);
+        reviews.add(review1);
+        album.setReviews(reviews);
+        Set<Album> albums = Sets.newHashSet();
+        albums.add(album);
+        when(dao.loadAll(Album.class)).thenReturn(albums);
+        List<Album> albums1 = ecmMiner.highestRatedAlbums(3);
+        assertEquals(1,albums1.size());
+        assertEquals("The Köln Concert",albums1.get(0).getAlbumName());
     }
 }

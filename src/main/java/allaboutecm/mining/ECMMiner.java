@@ -1,10 +1,7 @@
 package allaboutecm.mining;
 
 import allaboutecm.dataaccess.DAO;
-import allaboutecm.model.Album;
-import allaboutecm.model.MusicalInstrument;
-import allaboutecm.model.Musician;
-import allaboutecm.model.MusicianInstrument;
+import allaboutecm.model.*;
 import com.google.common.collect.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -215,6 +212,77 @@ public class ECMMiner {
         }
         return result1;
     }
+
+    //Added Code
+    /**
+     * Best selling albums.
+     * Extra Credit Part
+     * @Param k the number of albums to be returned.
+     */
+
+    public List<Album> bestSellingAlbums(int k) {
+        Collection<Album> albums = dao.loadAll(Album.class);
+        Map<Integer, Album> albumMap = Maps.newHashMap();
+        for (Album album: albums){
+            int sales = 0;
+            sales = album.getSales();
+            albumMap.put(sales,album);
+        }
+        List<Album> result1 = Lists.newArrayList();
+        List<Integer> sortedKeys1 = Lists.newArrayList(albumMap.keySet());
+        sortedKeys1.sort(Ordering.natural().reverse());
+        for (Integer sales : sortedKeys1) {
+            Album album = albumMap.get(sales);
+            if(result1.size()>=k)
+            {
+                break;
+            }
+            else
+                result1.add(album);
+        }
+        return result1;
+    }
+
+    //Added Code
+    /**
+     * Highest rated albums.
+     * Extra Credit Part
+     * @Param k the number of albums to be returned.
+     */
+
+    public List<Album> highestRatedAlbums(int k) {
+        Collection<Album> albums = dao.loadAll(Album.class);
+        Map<Integer, Album> albumMap = Maps.newHashMap();
+        for (Album album: albums){
+            Set<Review> reviews = album.getReviews();
+            int rating = 0;
+            int count = 0;
+            int averageRating;
+            for(Review review:reviews)
+            {
+                rating = rating + review.getRating();
+                count=count+1;
+            }
+            if(count == 0)
+                count=1;
+            averageRating = rating/count;
+            albumMap.put(averageRating,album);
+        }
+        List<Album> result1 = Lists.newArrayList();
+        List<Integer> sortedKeys1 = Lists.newArrayList(albumMap.keySet());
+        sortedKeys1.sort(Ordering.natural().reverse());
+        for (Integer rating : sortedKeys1) {
+            Album album = albumMap.get(rating);
+            if(result1.size()>=k)
+            {
+                break;
+            }
+            else
+                result1.add(album);
+        }
+        return result1;
+    }
+
 
     /**
      * Most similar albums to a give album. The similarity can be defined in a variety of ways.

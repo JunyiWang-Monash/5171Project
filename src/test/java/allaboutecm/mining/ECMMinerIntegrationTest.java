@@ -122,6 +122,7 @@ class ECMMinerIntegrationTest {
         List<Album> albums1 = ecmMiner.bestSellingAlbums(0);
         assertEquals(0,albums1.size());
     }
+
     // Extra Credit
     @DisplayName("Should return the best-selling albums")
     @Test

@@ -292,33 +292,39 @@ public class ECMMiner {
      * @Param k the number of albums to be returned.
      * @Param album
      */
-    // simply can be defined over the musicians / musicalInstruments that are used in the album;
-    // or in a more sophiscated way, can be defined over the name of the tracks, the description of the album, and so on.
-    // 自由发挥 最好是选一个somewhat more sophiscated business logic and then test
-
-    public List<String> mostSimilarAlbums(int k, Album album) {
+    public List<Album> mostSimilarAlbums(int k,Album album1) {
         Collection<Album> albums = dao.loadAll(Album.class);
-        List<String> result1 = Lists.newArrayList();
-        for (Album album1: albums){
-            List<String> nameList = Lists.newArrayList();
-            List<String> nameList2 = Lists.newArrayList();
-            List<Musician> musicians = album1.getFeaturedMusicians();
-            List<Musician> musician1 = album.getFeaturedMusicians();
-            for(Musician musician2 : musicians){
-                nameList.add(musician2.getName());
+        ListMultimap<Integer, Album> similarMap = MultimapBuilder.treeKeys().arrayListValues().build();;
+        albums.remove(album1);
+        List<Musician> musicians1 = album1.getFeaturedMusicians();
+        for (Album album: albums) {
+            List<Musician> musicians = album.getFeaturedMusicians();
+            int count = 0;
+            for(Musician musician:musicians1){
+                for (Musician albumMusician:musicians){
+                    if (musician.getName()==albumMusician.getName())
+                    {
+                        count = count + 1;
+                    }
+                }
             }
-            for(Musician musician3 : musician1){
-                nameList2.add(musician3.getName());
-            }
-                if(result1.size()>=k){
+            similarMap.put(count,album);
+        }
+        List<Album> result1 = Lists.newArrayList();
+        List<Integer> sortedKeys1 = Lists.newArrayList(similarMap.keySet());
+        sortedKeys1.sort(Ordering.natural().reverse());
+        for (Integer similar : sortedKeys1) {
+            List<Album> albums12 = similarMap.get(similar);
+            for(Album albumz:albums12){
+                if(result1.size()>=k)
+                {
                     break;
                 }
-                else if(nameList.contains(nameList2)) {
-                      result1.add(album1.getAlbumName());
-                }
+                else
+                    result1.add(albumz);
+            }
         }
         return result1;
-        }
-
+    }
 
 }

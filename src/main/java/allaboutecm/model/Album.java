@@ -64,6 +64,9 @@ public class Album extends Entity {
     @Property(name="releaseFormat")
     private List<String> releaseFormat;
 
+    @Property(name="sales")
+    private int sales;
+
     public Album() {
     }
 

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6c650e90-aacb-4562-bd4d-d1e43bc6ee9e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/allaboutecm/model/Album.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/allaboutecm/model/Album.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/allaboutecm/model/AlbumUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/allaboutecm/model/AlbumUnitTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/allaboutecm/model/Album.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/allaboutecm/model/Album.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/allaboutecm/model/AlbumUnitTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/allaboutecm/model/AlbumUnitTest.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1bsVND2Q8PLJHsmAF0i2IFIxEWD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Assignment2test/Assignment2test" />
+  </component>
+  <component name="RunManager" selected="JUnit.Neo4jDAOUnitTest">
+    <configuration name="AlbumUnitTest.testSetValidSales" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="fit5171-2020-13" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="allaboutecm.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="allaboutecm.model" />
+      <option name="MAIN_CLASS_NAME" value="allaboutecm.model.AlbumUnitTest" />
+      <option name="METHOD_NAME" value="testSetValidSales" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Neo4jDAOUnitTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="fit5171-2020-13" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="allaboutecm.dataaccess.neo4j.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="allaboutecm.dataaccess.neo4j" />
+      <option name="MAIN_CLASS_NAME" value="allaboutecm.dataaccess.neo4j.Neo4jDAOUnitTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Neo4jDAOUnitTest.successfulDeleteOfMusicalInstrument" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="fit5171-2020-13" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="allaboutecm.dataaccess.neo4j.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="allaboutecm.dataaccess.neo4j" />
+      <option name="MAIN_CLASS_NAME" value="allaboutecm.dataaccess.neo4j.Neo4jDAOUnitTest" />
+      <option name="METHOD_NAME" value="successfulDeleteOfMusicalInstrument" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Neo4jDAOUnitTest.successfulSearchOfMusicalInstrument" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="fit5171-2020-13" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="allaboutecm.dataaccess.neo4j.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="allaboutecm.dataaccess.neo4j" />
+      <option name="MAIN_CLASS_NAME" value="allaboutecm.dataaccess.neo4j.Neo4jDAOUnitTest" />
+      <option name="METHOD_NAME" value="successfulSearchOfMusicalInstrument" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Neo4jDAOUnitTest.successfulSearchOfTrack" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="fit5171-2020-13" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="allaboutecm.dataaccess.neo4j.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="allaboutecm.dataaccess.neo4j" />
+      <option name="MAIN_CLASS_NAME" value="allaboutecm.dataaccess.neo4j.Neo4jDAOUnitTest" />
+      <option name="METHOD_NAME" value="successfulSearchOfTrack" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.Neo4jDAOUnitTest" />
+        <item itemvalue="JUnit.AlbumUnitTest.testSetValidSales" />
+        <item itemvalue="JUnit.Neo4jDAOUnitTest.successfulSearchOfMusicalInstrument" />
+        <item itemvalue="JUnit.Neo4jDAOUnitTest.successfulDeleteOfMusicalInstrument" />
+        <item itemvalue="JUnit.Neo4jDAOUnitTest.successfulSearchOfTrack" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6c650e90-aacb-4562-bd4d-d1e43bc6ee9e" name="Default Changelist" comment="" />
+      <created>1589420745197</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1589420745197</updated>
+      <workItem from="1589420746534" duration="82000" />
+      <workItem from="1589431674663" duration="140000" />
+      <workItem from="1589431881790" duration="3740000" />
+      <workItem from="1589436494306" duration="3011000" />
+      <workItem from="1589442864081" duration="53000" />
+      <workItem from="1589449572253" duration="5704000" />
+      <workItem from="1589456577815" duration="12000" />
+      <workItem from="1589460719902" duration="1604000" />
+      <workItem from="1589464004975" duration="23000" />
+      <workItem from="1589464095114" duration="879000" />
+      <workItem from="1589465144464" duration="1021000" />
+      <workItem from="1589494030102" duration="28000" />
+      <workItem from="1589494178253" duration="12223000" />
+      <workItem from="1589513648650" duration="2404000" />
+      <workItem from="1589518995853" duration="172000" />
+      <workItem from="1589519220201" duration="107000" />
+      <workItem from="1589520595382" duration="24000" />
+      <workItem from="1589520787736" duration="721000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1589521022630">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1589521022630" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1589521508971">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589521508971" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1589521508971">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1589521508971" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1589521508971">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1589521508971" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1589521508971">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1589521508971" />
+    <state width="1493" height="269" key="GridCell.Tab.1.bottom" timestamp="1589513576965">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="269" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589513576965" />
+    <state width="1493" height="269" key="GridCell.Tab.1.center" timestamp="1589513576965">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="269" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1589513576965" />
+    <state width="1493" height="269" key="GridCell.Tab.1.left" timestamp="1589513576965">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="269" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1589513576965" />
+    <state width="1493" height="269" key="GridCell.Tab.1.right" timestamp="1589513576965">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="269" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1589513576965" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1589520597053">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1589520597053" />
+  </component>
+</project>

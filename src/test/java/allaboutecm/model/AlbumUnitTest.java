@@ -307,4 +307,11 @@ class AlbumUnitTest {
         album.setSales(400);
         assertEquals(400, album.getSales());
     }
+
+    @Test
+    @DisplayName("Test set invalid sales")
+    public void testSetInValidSales(){
+        Exception e = assertThrows(IllegalArgumentException.class,() -> album.setSales(-3));
+        assertEquals("Sales cannot be negative",e.getMessage());
+    }
 }

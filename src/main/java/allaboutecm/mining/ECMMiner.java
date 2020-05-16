@@ -135,6 +135,35 @@ public class ECMMiner {
     }
 
     /**
+     * Most Talented Musicians backup
+     */
+    public List<Musician> mostTalentedMusician1(int k){
+        Collection<MusicianInstrument> musicianInstruments = dao.loadAll(MusicianInstrument.class);
+        ListMultimap<Integer, Musician> musicianInstrumentMap = MultimapBuilder.treeKeys().arrayListValues().build();
+        for(MusicianInstrument musicianInstrument:musicianInstruments){
+            Musician musician = musicianInstrument.getMusician();
+            int instrument = musicianInstrument.getMusicalInstruments().size();
+            musicianInstrumentMap.put(instrument,musician);
+        }
+        List<Musician> result1 = Lists.newArrayList();
+        List<Integer> sortedKeys1 = Lists.newArrayList(musicianInstrumentMap.keySet());
+        sortedKeys1.sort(Ordering.natural().reverse());
+        for (Integer count : sortedKeys1) {
+            List<Musician> musicians = musicianInstrumentMap.get(count);
+            for(Musician musician:musicians)
+            {
+                if (result1.size() >= k)
+                {
+                    break;
+                }
+                else
+                    result1.add(musician);
+            }
+        }
+        return result1;
+    }
+
+    /**
      * Musicians that collaborate the most widely, by the number of other musicians they work with on albums.
      *
      * @Param k the number of musicians to be returned.

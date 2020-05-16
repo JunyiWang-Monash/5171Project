@@ -260,7 +260,7 @@ class ECMMinerUnitTest {
     public void shouldReturnTheMostSimilarAlbum() {
         Album album = new Album(1975, "ECM 1064/65", "The Köln Concert");
         Musician musician= new Musician("Keith Jarrett");
-        Musician musician1 = new Musician("John Scofield");
+        Musician musician1 = new Musician("John Snowfield");
         Musician musician2 = new Musician("Steve Swallow");
         List<Musician> musicians = Lists.newArrayList();
         musicians.add(musician);
@@ -290,5 +290,34 @@ class ECMMinerUnitTest {
         assertEquals(2,similarAlbums.size());
         assertEquals("The Köln Concert",similarAlbums.get(0).getAlbumName());
         assertEquals("Noddy",similarAlbums.get(1).getAlbumName());
+    }
+
+    @DisplayName("Should return the most talented musician")
+    @Test
+    public void shouldReturnTheMostTalentedMusicianBackup(){
+        Musician musician= new Musician("Keith Jarrett");
+        Musician musician1 = new Musician("John Snowfield");
+        Musician musician2 = new Musician("Steve Swallow");
+        MusicalInstrument musicalInstrument = new MusicalInstrument("Violin");
+        MusicalInstrument musicalInstrument1 = new MusicalInstrument("Guitar");
+        MusicalInstrument musicalInstrument2 = new MusicalInstrument("Piano");
+        Set<MusicalInstrument> musicalInstruments = Sets.newHashSet();
+        musicalInstruments.add(musicalInstrument);
+        musicalInstruments.add(musicalInstrument1);
+        musicalInstruments.add(musicalInstrument2);
+        MusicianInstrument musicianInstrument = new MusicianInstrument(musician,musicalInstruments);
+        MusicianInstrument musicianInstrument1 = new MusicianInstrument(musician1,musicalInstruments);
+        Set<MusicalInstrument> musicalInstruments1 = Sets.newHashSet();
+        musicalInstruments1.add(musicalInstrument);
+        musicalInstruments1.add(musicalInstrument1);
+        MusicianInstrument musicianInstrument2 = new MusicianInstrument(musician2,musicalInstruments1);
+        Set<MusicianInstrument> musicianInstruments = Sets.newHashSet();
+        musicianInstruments.add(musicianInstrument);
+        musicianInstruments.add(musicianInstrument1);
+        musicianInstruments.add(musicianInstrument2);
+        when(dao.loadAll(MusicianInstrument.class)).thenReturn(musicianInstruments);
+        List<Musician> musicians = ecmMiner.mostTalentedMusician1(2);
+        assertEquals(2,musicians.size());
+        assertEquals("John Snowfield",musicians.iterator().next().getName());
     }
 }

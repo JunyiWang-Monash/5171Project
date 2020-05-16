@@ -7,9 +7,6 @@
       <change beforePath="$PROJECT_DIR$/../.idea/testing_assignment2.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/allaboutecm/mining/ECMMiner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/allaboutecm/mining/ECMMiner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/allaboutecm/mining/ECMMinerUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/allaboutecm/mining/ECMMinerUnitTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/compiler.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/encodings.xml" beforeDir="false" />
@@ -363,6 +360,7 @@
       <workItem from="1589552776814" duration="250000" />
       <workItem from="1589585835397" duration="8797000" />
       <workItem from="1589612124988" duration="1640000" />
+      <workItem from="1589622898986" duration="719000" />
     </task>
     <servers />
   </component>

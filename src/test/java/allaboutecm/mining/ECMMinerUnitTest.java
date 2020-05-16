@@ -291,5 +291,4 @@ class ECMMinerUnitTest {
         assertEquals("The Köln Concert",similarAlbums.get(0).getAlbumName());
         assertEquals("Noddy",similarAlbums.get(1).getAlbumName());
     }
-
 }

@@ -200,4 +200,40 @@ class ECMMinerIntegrationTest {
         assertEquals("The Köln Concert",albums1.get(0).getAlbumName());
     }
 
+    //SimilarAlbum
+    @DisplayName("Should return the most similar album")
+    @Test
+    public void shouldReturnTheMostSimilarAlbum() {
+        Album album = new Album(1975, "ECM 1064/65", "The Köln Concert");
+        dao.createOrUpdate(album);
+        Musician musician= new Musician("Keith Jarrett");
+        Musician musician1 = new Musician("John Scofield");
+        Musician musician2 = new Musician("Steve Swallow");
+        List<Musician> musicians = Lists.newArrayList();
+        musicians.add(musician);
+        musicians.add(musician1);
+        musicians.add(musician2);
+        album.setFeaturedMusicians(musicians);
+        Album album1 = new Album(1974, "ECM 1080", "Swallow Tales");
+        dao.createOrUpdate(album1);
+        Musician musician3= new Musician("Keith Jarrett");
+        Musician musician4 = new Musician("John Scofield");
+        Musician musician5 = new Musician("Steve Thomas");
+        List<Musician> musicians1 = Lists.newArrayList();
+        musicians1.add(musician3);
+        musicians1.add(musician4);
+        musicians1.add(musician5);
+        album1.setFeaturedMusicians(musicians1);
+        Album album2 = new Album(1977, "ECM 1090", "Swat Kats");
+        dao.createOrUpdate(album2);
+        album2.setFeaturedMusicians(musicians);
+        Album album3 = new Album(1979, "ECM 1091", "Noddy");
+        dao.createOrUpdate(album3);
+        album3.setFeaturedMusicians(musicians);
+        List<Album> similarAlbums = ecmMiner.mostSimilarAlbums(2,album2);
+        assertEquals(2,similarAlbums.size());
+        assertEquals("The Köln Concert",similarAlbums.get(0).getAlbumName());
+        assertEquals("Noddy",similarAlbums.get(1).getAlbumName());
+    }
+
 }

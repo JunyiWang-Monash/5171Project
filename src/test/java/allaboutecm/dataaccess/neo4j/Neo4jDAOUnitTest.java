@@ -16,6 +16,7 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Collection;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -407,5 +408,64 @@ class Neo4jDAOUnitTest {
         Track track3 = dao.findTrackByName("SHE WAS OLD");
         assertEquals("SHE WAS OLD",track3.getTrackName());
     }
+
+    @DisplayName("Successful creation of concert")
+    @Test
+    public void successfulCreationAndLoadingOfConcert(){
+        assertEquals(0,dao.loadAll(Concert.class).size());
+        List<Musician> musicians = Lists.newArrayList();
+        Musician musician = new Musician("Keith Jarrett");
+        musicians.add(musician);
+        Concert concert = new Concert("12-07-2020",musicians,"Sydney festival",
+                "Sydney","Australia");
+        dao.createOrUpdate(concert);
+        assertEquals(1,dao.loadAll(Concert.class).size());
+    }
+
+    @DisplayName("Successful update of concert")
+    @Test
+    public void successfulUpdateOfConcert(){
+        List<Musician> musicians = Lists.newArrayList();
+        Musician musician = new Musician("Keith Jarrett");
+        musicians.add(musician);
+        Concert concert = new Concert("12-07-2020",musicians,"Sydney festival",
+                "Sydney","Australia");
+        dao.createOrUpdate(concert);
+        concert.setDate("15-07-2020");
+        assertEquals("15-07-2020",dao.loadAll(Concert.class).iterator().next().getDate());
+    }
+
+    @DisplayName("Successful delete of concert")
+    @Test
+    public void successfulDeleteOfConcert(){
+        List<Musician> musicians = Lists.newArrayList();
+        Musician musician = new Musician("Keith Jarrett");
+        musicians.add(musician);
+        Concert concert = new Concert("12-07-2020",musicians,"Sydney festival",
+                "Sydney","Australia");
+        dao.createOrUpdate(concert);
+        assertEquals(1,dao.loadAll(Concert.class).size());
+        dao.delete(concert);
+        assertEquals(0,dao.loadAll(Concert.class).size());
+    }
+
+    @DisplayName("Successful search of concert")
+    @Test
+    public void successfulSearchOfConcert(){
+        List<Musician> musicians = Lists.newArrayList();
+        Musician musician = new Musician("Keith Jarrett");
+        musicians.add(musician);
+        Concert concert = new Concert("12-07-2020",musicians,"Sydney festival",
+                "Sydney","Australia");
+        Concert concert1 = new Concert("14-07-2020",musicians,"Melbourne festival",
+                "Melbourne","Australia");
+        dao.createOrUpdate(concert);
+        dao.createOrUpdate(concert1);
+        Concert concert3 = dao.findConcertByName("Melbourne festival");
+        assertEquals("Melbourne",concert3.getCity());
+
+    }
+
+
 
 }

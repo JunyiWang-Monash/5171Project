@@ -22,4 +22,6 @@ public interface DAO {
     Review findReviewByContent(String content);
 
     Track findTrackByName(String name);
+
+    Concert findConcertByName(String concertName);
 }

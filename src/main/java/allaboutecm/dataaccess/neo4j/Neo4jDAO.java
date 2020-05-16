@@ -114,6 +114,18 @@ public class Neo4jDAO implements DAO {
         }
     }
 
+    @Override
+    public Concert findConcertByName(String concertName) {
+        Filters filters = new Filters();
+        filters.add(new Filter("concertName",EQUALS,concertName));
+        Collection<Concert> concerts = session.loadAll(Concert.class, filters);
+        if (concerts.isEmpty()) {
+            return null;
+        } else {
+            return concerts.iterator().next();
+        }
+    }
+
     private <T extends Entity> T findExistingEntity(Entity entity, Class clazz) {
         Filters filters = new Filters();
         Collection<? extends Entity> collection = Sets.newLinkedHashSet();

@@ -210,6 +210,9 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -219,6 +222,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1bsVND2Q8PLJHsmAF0i2IFIxEWD" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -231,7 +237,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunManager" selected="JUnit.ECMMinerUnitTest.shouldReturnTheMostTalentedMusicianBackup">
@@ -361,6 +367,8 @@
       <workItem from="1589585835397" duration="8797000" />
       <workItem from="1589612124988" duration="1640000" />
       <workItem from="1589622898986" duration="719000" />
+      <workItem from="1589628702990" duration="69000" />
+      <workItem from="1589628841584" duration="97000" />
     </task>
     <servers />
   </component>

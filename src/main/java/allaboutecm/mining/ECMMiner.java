@@ -171,37 +171,37 @@ public class ECMMiner {
 
     public List<Musician> mostSocialMusicians(int k) {
         Collection<Musician> musicians = dao.loadAll(Musician.class);
-        Map<Integer, Musician> nameMap = Maps.newHashMap();
-        Set<Album> musicianAlbums;
-        Set<Musician> cooperateMusicians = Sets.newHashSet();
+        ListMultimap<Integer, Musician> nameMap = MultimapBuilder.treeKeys().arrayListValues().build();
         for (Musician m : musicians) {
-            musicianAlbums = m.getAlbums();
+            Set<Musician> cooperateMusicians = Sets.newHashSet();
+            Set<Album> musicianAlbums = m.getAlbums();
             for (Album album : musicianAlbums) {
-                for (Musician musician : album.getFeaturedMusicians()) {
+                List<Musician> albumMusicians = album.getFeaturedMusicians();
+                for (Musician musician : albumMusicians) {
                     if (musician.getName() != m.getName()) {
                         if (cooperateMusicians.size() == 0) {
                             cooperateMusicians.add(musician);
-                        }
-                        else if (!cooperateMusicians.contains(musician)) {
+                        } else if (!cooperateMusicians.contains(musician)) {
                             cooperateMusicians.add(musician);
                         }
                     }
                 }
             }
             int count = cooperateMusicians.size();
-            nameMap.put(count,m);
+            nameMap.put(count, m);
+
         }
         List<Musician> result1 = Lists.newArrayList();
         List<Integer> sortedKeys1 = Lists.newArrayList(nameMap.keySet());
         sortedKeys1.sort(Ordering.natural().reverse());
         for (Integer count : sortedKeys1) {
-            Musician musician = nameMap.get(count);
-            if(result1.size()>=k)
-            {
-                break;
+            List<Musician> musicians1 = nameMap.get(count);
+            for (Musician musician1 : musicians1) {
+                if (result1.size() >= k) {
+                    break;
+                } else
+                    result1.add(musician1);
             }
-            else
-                result1.add(musician);
         }
         return result1;
     }

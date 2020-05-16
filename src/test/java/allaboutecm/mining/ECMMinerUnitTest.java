@@ -44,20 +44,32 @@ class ECMMinerUnitTest {
     }
 
     @Test
-    public void shouldReturnTheCooperatedMusicianWhenThereIsOnlyOneCooperatedMusician() {
-        Album album = new Album(2010, "ECM 2165", "JASMINE");
+    public void shouldReturnTheMusicianHimOrHerselfAsTheMostSocialMusicianWhenThereIsOnlyOneMusician() {
+        Album album = new Album(1975, "ECM 1064/65", "The Köln Concert");
         Musician musician = new Musician("Keith Jarrett");
-        Musician musician1 = new Musician("Charlie Haden");
+
+        musician.setAlbums(Sets.newHashSet(album));
         List<Musician> albumMusicians = Lists.newArrayList();
         albumMusicians.add(musician);
-        albumMusicians.add(musician1);
         album.setFeaturedMusicians(albumMusicians);
-        when(dao.loadAll(Musician.class)).thenReturn(Sets.newHashSet(albumMusicians));
+        when(dao.loadAll(Musician.class)).thenReturn(Sets.newHashSet(musician));
 
         List<Musician> musicians = ecmMiner.mostSocialMusicians(3);
 
         assertEquals(1, musicians.size());
         assertTrue(musicians.contains(musician));
+    }
+
+    @Test
+    public void shouldNotReturnReturnTheMostSocialMusicianWhenKIsZero() {
+        Album album = new Album(1975, "ECM 1064/65", "The Köln Concert");
+        Musician musician = new Musician("Keith Jarrett");
+        musician.setAlbums(Sets.newHashSet(album));
+        when(dao.loadAll(Musician.class)).thenReturn(Sets.newHashSet(musician));
+
+        List<Musician> musicians = ecmMiner.mostSocialMusicians(0);
+
+        assertEquals(0, musicians.size());
     }
 
     @Test
@@ -68,6 +80,14 @@ class ECMMinerUnitTest {
         Musician musician1 = new Musician("Gary Peacock");
         Musician musician2 = new Musician("Jack Dejohnette");
 
+        List<Musician> albumMusicians = Lists.newArrayList();
+        albumMusicians.add(musician1);
+        albumMusicians.add(musician);
+        albumMusicians.add(musician2);
+        album1.setFeaturedMusicians(albumMusicians);
+        List<Musician> albumMusicians1 = albumMusicians.subList(1, albumMusicians.size());
+        album2.setFeaturedMusicians(albumMusicians1);
+
         Set<Album> albums = Sets.newHashSet();
         albums.add(album1);
         albums.add(album2);
@@ -75,19 +95,16 @@ class ECMMinerUnitTest {
         musician1.setAlbums(Sets.newHashSet(album1));
         musician2.setAlbums(albums);
 
-        List<Musician> albumMusicians = Lists.newArrayList();
-        albumMusicians.add(musician);
-        albumMusicians.add(musician1);
-        albumMusicians.add(musician2);
-        album1.setFeaturedMusicians(albumMusicians);
-        List<Musician> albumMusicians1 = albumMusicians.subList(1, albumMusicians.size());
-        albumMusicians1.add(musician);
-        albumMusicians1.add(musician2);
-        album2.setFeaturedMusicians(albumMusicians1);
+        /*Set<Musician> albumMusicians2 = Sets.newHashSet();
+        albumMusicians2.add(musician);
+        albumMusicians2.add(musician1);
+        albumMusicians2.add(musician2);*/
 
-        when(dao.loadAll(Musician.class)).thenReturn(Sets.newHashSet(albumMusicians));
-        List<Musician> musicians = ecmMiner.mostSocialMusicians(2);
-        assertEquals(2, musicians.size());
+        when(dao.loadAll(Musician.class)).thenReturn(albumMusicians);
+
+        List<Musician> musicians = ecmMiner.mostSocialMusicians(3);
+
+        assertEquals(3, musicians.size());
         assertTrue(musicians.contains(musician));
     }
 

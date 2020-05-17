@@ -69,6 +69,39 @@ class ECMMinerIntegrationTest {
         //}
     }
 
+    @DisplayName("Should return the most prolific musician")
+    @Test
+    public void shouldReturnTheMostProlificMusician() {
+        Album album = new Album(1975, "ECM 1064/65", "The Köln Concert");
+        Musician musician = new Musician("Keith Jarrett");
+        Album album1 = new Album(1975, "ECM 1080", "Dark Knight");
+        Musician musician1 = new Musician("Robert Stall");
+        Set<Album> albums = Sets.newHashSet();
+        albums.add(album);
+        albums.add(album1);
+        musician.setAlbums(albums);
+        musician1.setAlbums(Sets.newHashSet(album));
+        dao.createOrUpdate(musician);
+        dao.createOrUpdate(musician1);
+        List<Musician> musicians1 = ecmMiner.mostProlificMusicians(1, 1974, 1976);
+        assertEquals(1, musicians1.size());
+        assertTrue(musicians1.contains(musician));
+    }
+
+    @DisplayName("Should return the musician when there is only one")
+    @Test
+    public void shouldReturnTheMusicianWhenThereIsOnlyOne() {
+        Album album = new Album(1975, "ECM 1064/65", "The Köln Concert");
+        Musician musician = new Musician("Keith Jarrett");
+        musician.setAlbums(Sets.newHashSet(album));
+        dao.createOrUpdate(musician);
+
+        List<Musician> musicians = ecmMiner.mostProlificMusicians(5, -1, -1);
+
+        assertEquals(1, musicians.size());
+        assertTrue(musicians.contains(musician));
+    }
+
     @Test
     public void shouldReturnTheBusiestYearWhenThereIsOnlyOneAlbum() {
         Album album = new Album(1975, "ECM 1064/65", "The Köln Concert");
@@ -217,7 +250,7 @@ class ECMMinerIntegrationTest {
         Album album1 = new Album(1974, "ECM 1080", "Swallow Tales");
         dao.createOrUpdate(album1);
         Musician musician3= new Musician("Keith Jarrett");
-        Musician musician4 = new Musician("John Scofield");
+        Musician musician4 = new Musician("John Snowfield");
         Musician musician5 = new Musician("Steve Thomas");
         List<Musician> musicians1 = Lists.newArrayList();
         musicians1.add(musician3);

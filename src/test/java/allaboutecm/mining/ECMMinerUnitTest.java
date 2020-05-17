@@ -30,6 +30,28 @@ class ECMMinerUnitTest {
         ecmMiner = new ECMMiner(dao);
     }
 
+    @DisplayName("Should return the most prolific musician")
+    @Test
+    public void shouldReturnTheMostProlificMusician() {
+        Album album = new Album(1975, "ECM 1064/65", "The Köln Concert");
+        Musician musician = new Musician("Keith Jarrett");
+        Album album1 = new Album(1975, "ECM 1080", "Dark Knight");
+        Musician musician1 = new Musician("Robert Stall");
+        Set<Album> albums = Sets.newHashSet();
+        albums.add(album);
+        albums.add(album1);
+        musician.setAlbums(albums);
+        musician1.setAlbums(Sets.newHashSet(album));
+        Set<Musician> musicians = Sets.newHashSet();
+        musicians.add(musician);
+        musicians.add(musician1);
+        when(dao.loadAll(Musician.class)).thenReturn(musicians);
+        List<Musician> musicians1 = ecmMiner.mostProlificMusicians(1, 1974, 1976);
+        assertEquals(1, musicians1.size());
+        assertTrue(musicians1.contains(musician));
+    }
+
+    @DisplayName("Should return the musician when there is only one")
     @Test
     public void shouldReturnTheMusicianWhenThereIsOnlyOne() {
         Album album = new Album(1975, "ECM 1064/65", "The Köln Concert");
@@ -43,6 +65,7 @@ class ECMMinerUnitTest {
         assertTrue(musicians.contains(musician));
     }
 
+    @DisplayName("Should return the cooperated musician when there is only one cooperated musician")
     @Test
     public void shouldReturnTheCooperatedMusicianWhenThereIsOnlyOneCooperatedMusician() {
         Album album = new Album(2010, "ECM 2165", "JASMINE");
@@ -60,6 +83,7 @@ class ECMMinerUnitTest {
         assertTrue(musicians.contains(musician));
     }
 
+    @DisplayName("Should return the most social musician")
     @Test
     public void shouldReturnTheMostSocialMusician() {
         Album album1 = new Album(2018, "ECM 2590", "After the Fall");
@@ -91,6 +115,7 @@ class ECMMinerUnitTest {
         assertTrue(musicians.contains(musician));
     }
 
+    @DisplayName("Should return the busiest year when there is only one album")
     @Test
     public void shouldReturnTheBusiestYearWhenThereIsOnlyOneAlbum() {
         Album album = new Album(1975, "ECM 1064/65", "The Köln Concert");
@@ -102,6 +127,7 @@ class ECMMinerUnitTest {
         assertTrue(busiestYears.contains(1975));
     }
 
+    @DisplayName("Should not return the busiest year when k is zero")
     @Test
     public void shouldNotReturnTheBusiestYearWhenKIsZero() {
         Album album = new Album(1975, "ECM 1064/65", "The Köln Concert");
@@ -316,7 +342,7 @@ class ECMMinerUnitTest {
         musicianInstruments.add(musicianInstrument1);
         musicianInstruments.add(musicianInstrument2);
         when(dao.loadAll(MusicianInstrument.class)).thenReturn(musicianInstruments);
-        List<Musician> musicians = ecmMiner.mostTalentedMusician1(2);
+        List<Musician> musicians = ecmMiner.mostTalentedMusicians(2);
         assertEquals(2,musicians.size());
         assertEquals("John Snowfield",musicians.iterator().next().getName());
     }

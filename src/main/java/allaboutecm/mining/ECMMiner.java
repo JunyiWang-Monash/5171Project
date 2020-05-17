@@ -6,10 +6,7 @@ import com.google.common.collect.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.Collection;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 /**
  * TODO: implement and test the methods in this class.
@@ -33,52 +30,28 @@ public class ECMMiner {
      */
     public List<Musician> mostProlificMusicians(int k, int startYear, int endYear) {
         Collection<Musician> musicians = dao.loadAll(Musician.class);
-        Map<String, Musician> nameMap = Maps.newHashMap();
-        for (Musician m : musicians) {
-            nameMap.put(m.getName(), m);
-        }
-
-        ListMultimap<String, Album> multimap = MultimapBuilder.treeKeys().arrayListValues().build();
-        ListMultimap<Integer, Musician> countMap = MultimapBuilder.treeKeys().arrayListValues().build();
-
-        for (Musician musician : musicians) {
-            Set<Album> albums = musician.getAlbums();
-            for (Album album : albums) {
-                boolean toInclude =
-                        !((startYear > 0 && album.getReleaseYear() < startYear) ||
-                                (endYear > 0 && album.getReleaseYear() > endYear));
-
-                if (toInclude) {
-                    multimap.put(musician.getName(), album);
-                }
+        ListMultimap<Integer, Musician> musicianMap = MultimapBuilder.treeKeys().arrayListValues().build();
+        for(Musician musician:musicians){
+            Set<Album> albums1 = musician.getAlbums();
+            int count = 0;
+            for(Album album:albums1) {
+                if (album.getReleaseYear() >= startYear && album.getReleaseYear() <= endYear)
+                    count = count + 1;
             }
+            musicianMap.put(count,musician);
         }
-
-        Map<String, Collection<Album>> albumMultimap = multimap.asMap();
-        for (String name : albumMultimap.keySet()) {
-            Collection<Album> albums = albumMultimap.get(name);
-            int size = albums.size();
-            countMap.put(size, nameMap.get(name));
-        }
-
         List<Musician> result = Lists.newArrayList();
-        List<Integer> sortedKeys = Lists.newArrayList(countMap.keySet());
+        List<Integer> sortedKeys = Lists.newArrayList(musicianMap.keySet());
         sortedKeys.sort(Ordering.natural().reverse());
         for (Integer count : sortedKeys) {
-            List<Musician> list = countMap.get(count);
-            if (list.size() >= k) {
-                break;
-            }
-            if (result.size() + list.size() >= k) {
-                int newAddition = k - result.size();
-                for (int i = 0; i < newAddition; i++) {
-                    result.add(list.get(i));
-                }
-            } else {
-                result.addAll(list);
+            List<Musician> list = musicianMap.get(count);
+            for (Musician m:list){
+                if (result.size()>=k)
+                    break;
+                else
+                    result.add(m);
             }
         }
-
         return result;
     }
 
@@ -87,57 +60,7 @@ public class ECMMiner {
      *
      * @Param k the number of musicians to be returned.
      */
-    public List<Musician> mostTalentedMusicians(int k) {
-        Collection<MusicianInstrument> musicianInstruments = dao.loadAll(MusicianInstrument.class);
-        Map<String, Musician> nameMap1 = Maps.newHashMap();
-        for (MusicianInstrument m : musicianInstruments) {
-            nameMap1.put(m.getMusician().getName(), m.getMusician());
-        }
-
-        ListMultimap<String, MusicalInstrument> multimap1 = MultimapBuilder.treeKeys().arrayListValues().build();
-        ListMultimap<Integer, Musician> countMap1 = MultimapBuilder.treeKeys().arrayListValues().build();
-
-        for (MusicianInstrument musicianInstrument : musicianInstruments) {
-            Set<MusicalInstrument> musicalInstrument = musicianInstrument.getMusicalInstruments();
-            for (MusicalInstrument musicalInstruments: musicalInstrument) {
-                multimap1.put(musicianInstrument.getMusician().getName(),musicalInstruments);
-            }
-        }
-
-
-
-        Map<String, Collection<MusicalInstrument>> musicialInstrumentMultimap = multimap1.asMap();
-        for (String name : musicialInstrumentMultimap.keySet()) {
-            Collection<MusicalInstrument> musicalInstrument = musicialInstrumentMultimap.get(name);
-            int size = musicalInstrument.size();
-            countMap1.put(size, nameMap1.get(name));
-        }
-
-        List<Musician> result = Lists.newArrayList();
-        List<Integer> sortedKeys = Lists.newArrayList(countMap1.keySet());
-        sortedKeys.sort(Ordering.natural().reverse());
-        for (Integer count : sortedKeys) {
-            List<Musician> list = countMap1.get(count);
-            if (list.size() >= k) {
-                break;
-            }
-            if (result.size() + list.size() >= k) {
-                int newAddition = k - result.size();
-                for (int i = 0; i < newAddition; i++) {
-                    result.add(list.get(i));
-                }
-            } else {
-                result.addAll(list);
-            }
-        }
-        return result;
-
-    }
-
-    /**
-     * Most Talented Musicians backup
-     */
-    public List<Musician> mostTalentedMusician1(int k){
+    public List<Musician> mostTalentedMusicians(int k){
         Collection<MusicianInstrument> musicianInstruments = dao.loadAll(MusicianInstrument.class);
         ListMultimap<Integer, Musician> musicianInstrumentMap = MultimapBuilder.treeKeys().arrayListValues().build();
         for(MusicianInstrument musicianInstrument:musicianInstruments){
@@ -160,6 +83,7 @@ public class ECMMiner {
                     result1.add(musician);
             }
         }
+        //result1.sort(Comparator.comparing(Musician::getName));
         return result1;
     }
 
@@ -203,6 +127,7 @@ public class ECMMiner {
             else
                 result1.add(musician);
         }
+       // result1.sort(Comparator.comparing(Musician::getName));
         return result1;
     }
 
@@ -242,7 +167,9 @@ public class ECMMiner {
                     result1.add(release);
             }
         }
+        //result1.sort(Ordering.natural());
         return result1;
+
     }
 
     //Added Code
@@ -275,6 +202,7 @@ public class ECMMiner {
                     result1.add(album);
             }
         }
+        //result1.sort(Comparator.comparing(Album::getAlbumName));
         return result1;
     }
 
@@ -318,6 +246,7 @@ public class ECMMiner {
                     result1.add(album);
             }
         }
+        //result1.sort(Comparator.comparing(Album::getAlbumName));
         return result1;
     }
 
@@ -362,6 +291,7 @@ public class ECMMiner {
                     result1.add(albumz);
             }
         }
+        //result1.sort(Comparator.comparing(Album::getAlbumName));
         return result1;
     }
 

@@ -8,6 +8,14 @@
       <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/allaboutecm/model/Concert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/allaboutecm/model/Concert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/allaboutecm/mining/ECMMinerIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/allaboutecm/mining/ECMMinerIntegrationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/allaboutecm/mining/ECMMinerUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/allaboutecm/mining/ECMMinerUnitTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/allaboutecm/model/ConcertUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/allaboutecm/model/ConcertUnitTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/allaboutecm/model/Concert.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/allaboutecm/model/Concert.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/allaboutecm/mining/ECMMinerIntegrationTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/allaboutecm/mining/ECMMinerIntegrationTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/allaboutecm/mining/ECMMinerUnitTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/allaboutecm/mining/ECMMinerUnitTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/allaboutecm/model/ConcertUnitTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/allaboutecm/model/ConcertUnitTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/compiler.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/encodings.xml" beforeDir="false" />
@@ -241,7 +249,70 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
-  <component name="RunManager" selected="JUnit.Neo4jDAOUnitTest">
+  <component name="RunManager" selected="JUnit.ECMMinerIntegrationTest.shouldReturnTheMostSimilarAlbum">
+    <configuration name="ConcertUnitTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="fit5171-2020-13" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="allaboutecm.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="allaboutecm.model" />
+      <option name="MAIN_CLASS_NAME" value="allaboutecm.model.ConcertUnitTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConcertUnitTest.SetValidMusicians" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="fit5171-2020-13" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="allaboutecm.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="allaboutecm.model" />
+      <option name="MAIN_CLASS_NAME" value="allaboutecm.model.ConcertUnitTest" />
+      <option name="METHOD_NAME" value="SetValidMusicians" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ECMMinerIntegrationTest.shouldNotReturnTheBusiestYearWhenKIsZeroOrNegative" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="fit5171-2020-13" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="allaboutecm.mining.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="allaboutecm.mining" />
+      <option name="MAIN_CLASS_NAME" value="allaboutecm.mining.ECMMinerIntegrationTest" />
+      <option name="METHOD_NAME" value="shouldNotReturnTheBusiestYearWhenKIsZeroOrNegative" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ECMMinerIntegrationTest.shouldReturnTheBusiestYearWhenThereIsOnlyOneAlbum" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="fit5171-2020-13" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="allaboutecm.mining.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="allaboutecm.mining" />
+      <option name="MAIN_CLASS_NAME" value="allaboutecm.mining.ECMMinerIntegrationTest" />
+      <option name="METHOD_NAME" value="shouldReturnTheBusiestYearWhenThereIsOnlyOneAlbum" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ECMMinerIntegrationTest.shouldReturnTheMostSimilarAlbum" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="fit5171-2020-13" />
       <extension name="coverage">
@@ -258,75 +329,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ECMMinerIntegrationTest.shouldReturnTheMusicianWhenThereIsOnlyOne" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="fit5171-2020-13" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="allaboutecm.mining.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="allaboutecm.mining" />
-      <option name="MAIN_CLASS_NAME" value="allaboutecm.mining.ECMMinerIntegrationTest" />
-      <option name="METHOD_NAME" value="shouldReturnTheMusicianWhenThereIsOnlyOne" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ECMMinerUnitTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="fit5171-2020-13" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="allaboutecm.mining.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="allaboutecm.mining" />
-      <option name="MAIN_CLASS_NAME" value="allaboutecm.mining.ECMMinerUnitTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ECMMinerUnitTest.shouldReturnTheMostSimilarAlbum" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="fit5171-2020-13" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="allaboutecm.mining.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="allaboutecm.mining" />
-      <option name="MAIN_CLASS_NAME" value="allaboutecm.mining.ECMMinerUnitTest" />
-      <option name="METHOD_NAME" value="shouldReturnTheMostSimilarAlbum" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Neo4jDAOUnitTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="fit5171-2020-13" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="allaboutecm.dataaccess.neo4j.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="allaboutecm.dataaccess.neo4j" />
-      <option name="MAIN_CLASS_NAME" value="allaboutecm.dataaccess.neo4j.Neo4jDAOUnitTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Neo4jDAOUnitTest" />
-        <item itemvalue="JUnit.ECMMinerUnitTest" />
-        <item itemvalue="JUnit.ECMMinerUnitTest.shouldReturnTheMostSimilarAlbum" />
         <item itemvalue="JUnit.ECMMinerIntegrationTest.shouldReturnTheMostSimilarAlbum" />
-        <item itemvalue="JUnit.ECMMinerIntegrationTest.shouldReturnTheMusicianWhenThereIsOnlyOne" />
+        <item itemvalue="JUnit.ConcertUnitTest" />
+        <item itemvalue="JUnit.ConcertUnitTest.SetValidMusicians" />
+        <item itemvalue="JUnit.ECMMinerIntegrationTest.shouldNotReturnTheBusiestYearWhenKIsZeroOrNegative" />
+        <item itemvalue="JUnit.ECMMinerIntegrationTest.shouldReturnTheBusiestYearWhenThereIsOnlyOneAlbum" />
       </list>
     </recent_temporary>
   </component>
@@ -372,6 +381,8 @@
       <workItem from="1589712837921" duration="83000" />
       <workItem from="1589712968754" duration="34000" />
       <workItem from="1589713241788" duration="120000" />
+      <workItem from="1589780387659" duration="10660000" />
+      <workItem from="1589791234306" duration="495000" />
     </task>
     <servers />
   </component>
@@ -379,30 +390,30 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="93" y="93" width="1350" height="638" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1589711554337">
+    <state x="93" y="93" width="1350" height="638" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1589791555421">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="93" y="93" width="1350" height="638" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1536.824@0.0.1536.824" timestamp="1589711554337" />
+    <state x="93" y="93" width="1350" height="638" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1536.824@0.0.1536.824" timestamp="1589791555421" />
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1589593214154">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1589593214154" />
-    <state width="1493" height="297" key="GridCell.Tab.0.bottom" timestamp="1589713360766">
+    <state width="1478" height="356" key="GridCell.Tab.0.bottom" timestamp="1589791731259">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="297" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589713360766" />
-    <state width="1493" height="297" key="GridCell.Tab.0.center" timestamp="1589713360766">
+    <state width="1478" height="356" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589791731259" />
+    <state width="1478" height="356" key="GridCell.Tab.0.center" timestamp="1589791731259">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="297" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1589713360766" />
-    <state width="1493" height="297" key="GridCell.Tab.0.left" timestamp="1589713360766">
+    <state width="1478" height="356" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1589791731259" />
+    <state width="1478" height="356" key="GridCell.Tab.0.left" timestamp="1589791731259">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="297" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1589713360766" />
-    <state width="1493" height="297" key="GridCell.Tab.0.right" timestamp="1589713360766">
+    <state width="1478" height="356" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1589791731259" />
+    <state width="1478" height="356" key="GridCell.Tab.0.right" timestamp="1589791731259">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="297" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1589713360766" />
+    <state width="1478" height="356" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1589791731259" />
     <state width="1493" height="269" key="GridCell.Tab.1.bottom" timestamp="1589552660650">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -423,9 +434,13 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1589524238235" />
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1589713243229">
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1589791235718">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1589713243229" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1589791235718" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1589780977322">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1589780977322" />
   </component>
 </project>

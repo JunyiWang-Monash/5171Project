@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: allaboutecm.model.MusicianUnitTest
 -------------------------------------------------------------------------------
-Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.096 s - in allaboutecm.model.MusicianUnitTest
+Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.692 s - in allaboutecm.model.MusicianUnitTest

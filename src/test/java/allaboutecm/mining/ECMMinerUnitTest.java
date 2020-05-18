@@ -30,6 +30,38 @@ class ECMMinerUnitTest {
         ecmMiner = new ECMMiner(dao);
     }
 
+    @DisplayName("Should not return any musician if k is zero or negative")
+    @Test
+    public void shouldNotReturnAnyMusicianWhenKIsZeroOrNegative() {
+        Album album = new Album(1975, "ECM 1064/65", "The Köln Concert");
+        Musician musician = new Musician("Keith Jarrett");
+        Album album1 = new Album(1975, "ECM 1080", "Dark Knight");
+        Musician musician1 = new Musician("Robert Stall");
+        Set<Album> albums = Sets.newHashSet();
+        albums.add(album);
+        albums.add(album1);
+        musician.setAlbums(albums);
+        musician1.setAlbums(Sets.newHashSet(album));
+        Set<Musician> musicians = Sets.newHashSet();
+        musicians.add(musician);
+        musicians.add(musician1);
+        when(dao.loadAll(Musician.class)).thenReturn(musicians);
+        List<Musician> musicians1 = ecmMiner.mostProlificMusicians(0, 1974, 1976);
+        assertEquals(0, musicians1.size());
+    }
+
+    @DisplayName("Should return the prolific musician when there is only one")
+    @Test
+    public void shouldReturnTheProlificMusicianWhenThereIsOnlyOne() {
+        Album album = new Album(1975, "ECM 1064/65", "The Köln Concert");
+        Musician musician = new Musician("Keith Jarrett");
+        musician.setAlbums(Sets.newHashSet(album));
+        when(dao.loadAll(Musician.class)).thenReturn(Sets.newHashSet(musician));
+        List<Musician> musicians = ecmMiner.mostProlificMusicians(5, -1, -1);
+        assertEquals(1, musicians.size());
+        assertTrue(musicians.contains(musician));
+    }
+
     @DisplayName("Should return the most prolific musician")
     @Test
     public void shouldReturnTheMostProlificMusician() {
@@ -51,19 +83,6 @@ class ECMMinerUnitTest {
         assertTrue(musicians1.contains(musician));
     }
 
-    @DisplayName("Should return the musician when there is only one")
-    @Test
-    public void shouldReturnTheMusicianWhenThereIsOnlyOne() {
-        Album album = new Album(1975, "ECM 1064/65", "The Köln Concert");
-        Musician musician = new Musician("Keith Jarrett");
-        musician.setAlbums(Sets.newHashSet(album));
-        when(dao.loadAll(Musician.class)).thenReturn(Sets.newHashSet(musician));
-
-        List<Musician> musicians = ecmMiner.mostProlificMusicians(5, -1, -1);
-
-        assertEquals(1, musicians.size());
-        assertTrue(musicians.contains(musician));
-    }
 
     @DisplayName("Should return the cooperated musician when there is only one cooperated musician")
     @Test
@@ -83,9 +102,9 @@ class ECMMinerUnitTest {
         assertTrue(musicians.contains(musician));
     }
 
-    @DisplayName("Should return the most social musician")
+    @DisplayName("Should not return the most social musician when k is zero or negative")
     @Test
-    public void shouldNotReturnReturnTheMostSocialMusicianWhenKIsZero() {
+    public void shouldNotReturnReturnTheMostSocialMusicianWhenKIsZeroOrNegative() {
         Album album = new Album(1975, "ECM 1064/65", "The Köln Concert");
         Musician musician = new Musician("Keith Jarrett");
         musician.setAlbums(Sets.newHashSet(album));
@@ -96,6 +115,7 @@ class ECMMinerUnitTest {
         assertEquals(0, musicians.size());
     }
 
+    @DisplayName("Should return the most social musician")
     @Test
     public void shouldReturnTheMostSocialMusician() {
         Album album1 = new Album(2018, "ECM 2590", "After the Fall");
@@ -119,17 +139,116 @@ class ECMMinerUnitTest {
         musician1.setAlbums(Sets.newHashSet(album1));
         musician2.setAlbums(albums);
 
-        /*Set<Musician> albumMusicians2 = Sets.newHashSet();
-        albumMusicians2.add(musician);
-        albumMusicians2.add(musician1);
-        albumMusicians2.add(musician2);*/
-
         when(dao.loadAll(Musician.class)).thenReturn(albumMusicians);
 
         List<Musician> musicians = ecmMiner.mostSocialMusicians(3);
 
         assertEquals(3, musicians.size());
         assertTrue(musicians.contains(musician));
+    }
+
+    @DisplayName("Should return the only talented musician when there is only one")
+    @Test
+    public void shouldReturnTheOnlyTalentedMusicianWhenThereIsOnlyOne(){
+        Musician musician= new Musician("Keith Jarrett");
+        MusicalInstrument musicalInstrument = new MusicalInstrument("Violin");
+        MusicianInstrument musicianInstrument = new MusicianInstrument(musician,Sets.newHashSet(musicalInstrument));
+        when(dao.loadAll(MusicianInstrument.class)).thenReturn(Sets.newHashSet(musicianInstrument));
+        List<Musician> musicians = ecmMiner.mostTalentedMusicians(2);
+        assertEquals(1,musicians.size());
+        assertEquals("Keith Jarrett",musicians.iterator().next().getName());
+    }
+
+    @DisplayName("Should not return any talented musician when k is zero or negative")
+    @Test
+    public void shouldNotReturnAnyTalentedMusicianWhenKIsZeroOrNegative(){
+        Musician musician= new Musician("Keith Jarrett");
+        MusicalInstrument musicalInstrument = new MusicalInstrument("Violin");
+        MusicianInstrument musicianInstrument = new MusicianInstrument(musician,Sets.newHashSet(musicalInstrument));
+        when(dao.loadAll(MusicianInstrument.class)).thenReturn(Sets.newHashSet(musicianInstrument));
+        List<Musician> musicians = ecmMiner.mostTalentedMusicians(0);
+        assertEquals(0,musicians.size());
+    }
+
+    @DisplayName("Should return the most talented musician")
+    @Test
+    public void shouldReturnTheMostTalentedMusician(){
+        Musician musician= new Musician("Keith Jarrett");
+        Musician musician1 = new Musician("John Snowfield");
+        Musician musician2 = new Musician("Steve Swallow");
+        MusicalInstrument musicalInstrument = new MusicalInstrument("Violin");
+        MusicalInstrument musicalInstrument1 = new MusicalInstrument("Guitar");
+        MusicalInstrument musicalInstrument2 = new MusicalInstrument("Piano");
+        Set<MusicalInstrument> musicalInstruments = Sets.newHashSet();
+        musicalInstruments.add(musicalInstrument);
+        musicalInstruments.add(musicalInstrument1);
+        musicalInstruments.add(musicalInstrument2);
+        MusicianInstrument musicianInstrument = new MusicianInstrument(musician,musicalInstruments);
+        MusicianInstrument musicianInstrument1 = new MusicianInstrument(musician1,musicalInstruments);
+        Set<MusicalInstrument> musicalInstruments1 = Sets.newHashSet();
+        musicalInstruments1.add(musicalInstrument);
+        musicalInstruments1.add(musicalInstrument1);
+        MusicianInstrument musicianInstrument2 = new MusicianInstrument(musician2,musicalInstruments1);
+        Set<MusicianInstrument> musicianInstruments = Sets.newHashSet();
+        musicianInstruments.add(musicianInstrument);
+        musicianInstruments.add(musicianInstrument1);
+        musicianInstruments.add(musicianInstrument2);
+        when(dao.loadAll(MusicianInstrument.class)).thenReturn(musicianInstruments);
+        List<Musician> musicians = ecmMiner.mostTalentedMusicians(2);
+        assertEquals(2,musicians.size());
+        assertTrue(musicians.contains(musician));
+        assertTrue(musicians.contains(musician1));
+    }
+
+    @DisplayName("Should not return any similar album if the value of k is zero or negative")
+    @Test
+    public void shouldNotReturnAnySimilarAlbumIfTheValueOfKIsZeroOrNegative() {
+        Album album = new Album(1975, "ECM 1064/65", "The Köln Concert");
+        Album album1 = new Album(1976, "ECM 1080", "The Köln Concert12");
+        Musician musician= new Musician("Keith Jarrett");
+        album.setFeaturedMusicians(Lists.newArrayList(musician));
+        Set<Album> albums = Sets.newHashSet();
+        albums.add(album);
+        when(dao.loadAll(Album.class)).thenReturn(albums);
+        List<Album> similarAlbums = ecmMiner.mostSimilarAlbums(0,album1);
+        assertEquals(0,similarAlbums.size());
+    }
+
+    @DisplayName("Should return the most similar album")
+    @Test
+    public void shouldReturnTheMostSimilarAlbum() {
+        Album album = new Album(1975, "ECM 1064/65", "The Köln Concert");
+        Musician musician= new Musician("Keith Jarrett");
+        Musician musician1 = new Musician("John Snowfield");
+        Musician musician2 = new Musician("Steve Swallow");
+        List<Musician> musicians = Lists.newArrayList();
+        musicians.add(musician);
+        musicians.add(musician1);
+        musicians.add(musician2);
+        album.setFeaturedMusicians(musicians);
+        Album album1 = new Album(1974, "ECM 1080", "Swallow Tales");
+        Musician musician3= new Musician("Keith Jarrett");
+        Musician musician4 = new Musician("John Scofield");
+        Musician musician5 = new Musician("Steve Thomas");
+        List<Musician> musicians1 = Lists.newArrayList();
+        musicians1.add(musician3);
+        musicians1.add(musician4);
+        musicians1.add(musician5);
+        album1.setFeaturedMusicians(musicians1);
+        Album album2 = new Album(1977, "ECM 1090", "Swat Kats");
+        album2.setFeaturedMusicians(musicians);
+        Album album3 = new Album(1979, "ECM 1091", "Noddy");
+        album3.setFeaturedMusicians(musicians);
+        Set<Album> albums = Sets.newHashSet();
+        albums.add(album);
+        albums.add(album1);
+        albums.add(album2);
+        albums.add(album3);
+        when(dao.loadAll(Album.class)).thenReturn(albums);
+        List<Album> similarAlbums = ecmMiner.mostSimilarAlbums(2,album2);
+        assertEquals(2,similarAlbums.size());
+        assertEquals("The Köln Concert",similarAlbums.get(0).getAlbumName());
+        assertEquals("Noddy",similarAlbums.get(1).getAlbumName());
     }
 
     @DisplayName("Should return the busiest year when there is only one album")
@@ -144,9 +263,9 @@ class ECMMinerUnitTest {
         assertTrue(busiestYears.contains(1975));
     }
 
-    @DisplayName("Should not return the busiest year when k is zero")
+    @DisplayName("Should not return the busiest year when k is zero or negative")
     @Test
-    public void shouldNotReturnTheBusiestYearWhenKIsZero() {
+    public void shouldNotReturnTheBusiestYearWhenKIsZeroOrNegative() {
         Album album = new Album(1975, "ECM 1064/65", "The Köln Concert");
         Set<Album> albums = Sets.newHashSet();
         albums.add(album);
@@ -155,6 +274,7 @@ class ECMMinerUnitTest {
         assertEquals(0,busiestYears.size());
     }
 
+    @DisplayName("Should return the busiest year")
     @Test
     public void shouldReturnTheBusiestYear() {
         Album album = new Album(1975, "ECM 1064/65", "The Köln Concert");
@@ -176,21 +296,6 @@ class ECMMinerUnitTest {
         assertEquals(2,busiestYears.size());
     }
 
-    @Test
-    public void shouldReturnTheMusicianWhenThereIsOnlyOne1(){
-        MusicalInstrument musicialInstrument= new MusicalInstrument("PIANO");
-        Set<MusicalInstrument> musicalInstruments = Sets.newHashSet();
-        musicalInstruments.add(musicialInstrument);
-        Musician musician= new Musician("Keith Jarrett");
-        MusicianInstrument musicianInstrument=new MusicianInstrument(musician, musicalInstruments);
-        when(dao.loadAll(MusicianInstrument.class)).thenReturn(Sets.newHashSet(musicianInstrument));
-
-        List<Musician> musicians = ecmMiner.mostTalentedMusicians(5);
-
-        assertEquals(1, musicians.size());
-        assertTrue(musicians.contains(musician));
-
-    }
     // Extra Credit
     @DisplayName("Should return the best-selling albums when there is only one")
     @Test
@@ -202,9 +307,9 @@ class ECMMinerUnitTest {
         assertEquals(50,albums.iterator().next().getSales());
     }
     // Extra Credit
-    @DisplayName("Should not return the best-selling albums when k is 0")
+    @DisplayName("Should not return the best-selling albums when k is 0 or negative")
     @Test
-    public void shouldNotReturnTheBestSellingAlbumsWhenKIsZero() {
+    public void shouldNotReturnTheBestSellingAlbumsWhenKIsZeroOrNegative() {
         Album album = new Album(1975, "ECM 1064/65", "The Köln Concert");
         album.setSales(50);
         Set<Album> albums = Sets.newHashSet();
@@ -262,9 +367,9 @@ class ECMMinerUnitTest {
     }
 
     // Extra Credit
-    @DisplayName("Should not return the highest rated albums when k is 0")
+    @DisplayName("Should not return the highest rated albums when k is 0 or negative")
     @Test
-    public void shouldNotReturnTheHighestRatedAlbumsWhenKIsZero() {
+    public void shouldNotReturnTheHighestRatedAlbumsWhenKIsZeroOrNegative() {
         Album album = new Album(1975, "ECM 1064/65", "The Köln Concert");
         Set<Review> reviews = Sets.newHashSet();
         Review review = new Review("Very nice",9);
@@ -298,69 +403,5 @@ class ECMMinerUnitTest {
         assertEquals("The Köln Concert",albums1.get(0).getAlbumName());
     }
 
-    @DisplayName("Should return the most similar album")
-    @Test
-    public void shouldReturnTheMostSimilarAlbum() {
-        Album album = new Album(1975, "ECM 1064/65", "The Köln Concert");
-        Musician musician= new Musician("Keith Jarrett");
-        Musician musician1 = new Musician("John Snowfield");
-        Musician musician2 = new Musician("Steve Swallow");
-        List<Musician> musicians = Lists.newArrayList();
-        musicians.add(musician);
-        musicians.add(musician1);
-        musicians.add(musician2);
-        album.setFeaturedMusicians(musicians);
-        Album album1 = new Album(1974, "ECM 1080", "Swallow Tales");
-        Musician musician3= new Musician("Keith Jarrett");
-        Musician musician4 = new Musician("John Scofield");
-        Musician musician5 = new Musician("Steve Thomas");
-        List<Musician> musicians1 = Lists.newArrayList();
-        musicians1.add(musician3);
-        musicians1.add(musician4);
-        musicians1.add(musician5);
-        album1.setFeaturedMusicians(musicians1);
-        Album album2 = new Album(1977, "ECM 1090", "Swat Kats");
-        album2.setFeaturedMusicians(musicians);
-        Album album3 = new Album(1979, "ECM 1091", "Noddy");
-        album3.setFeaturedMusicians(musicians);
-        Set<Album> albums = Sets.newHashSet();
-        albums.add(album);
-        albums.add(album1);
-        albums.add(album2);
-        albums.add(album3);
-        when(dao.loadAll(Album.class)).thenReturn(albums);
-        List<Album> similarAlbums = ecmMiner.mostSimilarAlbums(2,album2);
-        assertEquals(2,similarAlbums.size());
-        assertEquals("The Köln Concert",similarAlbums.get(0).getAlbumName());
-        assertEquals("Noddy",similarAlbums.get(1).getAlbumName());
-    }
 
-    @DisplayName("Should return the most talented musician")
-    @Test
-    public void shouldReturnTheMostTalentedMusicianBackup(){
-        Musician musician= new Musician("Keith Jarrett");
-        Musician musician1 = new Musician("John Snowfield");
-        Musician musician2 = new Musician("Steve Swallow");
-        MusicalInstrument musicalInstrument = new MusicalInstrument("Violin");
-        MusicalInstrument musicalInstrument1 = new MusicalInstrument("Guitar");
-        MusicalInstrument musicalInstrument2 = new MusicalInstrument("Piano");
-        Set<MusicalInstrument> musicalInstruments = Sets.newHashSet();
-        musicalInstruments.add(musicalInstrument);
-        musicalInstruments.add(musicalInstrument1);
-        musicalInstruments.add(musicalInstrument2);
-        MusicianInstrument musicianInstrument = new MusicianInstrument(musician,musicalInstruments);
-        MusicianInstrument musicianInstrument1 = new MusicianInstrument(musician1,musicalInstruments);
-        Set<MusicalInstrument> musicalInstruments1 = Sets.newHashSet();
-        musicalInstruments1.add(musicalInstrument);
-        musicalInstruments1.add(musicalInstrument1);
-        MusicianInstrument musicianInstrument2 = new MusicianInstrument(musician2,musicalInstruments1);
-        Set<MusicianInstrument> musicianInstruments = Sets.newHashSet();
-        musicianInstruments.add(musicianInstrument);
-        musicianInstruments.add(musicianInstrument1);
-        musicianInstruments.add(musicianInstrument2);
-        when(dao.loadAll(MusicianInstrument.class)).thenReturn(musicianInstruments);
-        List<Musician> musicians = ecmMiner.mostTalentedMusicians(2);
-        assertEquals(2,musicians.size());
-        assertEquals("John Snowfield",musicians.iterator().next().getName());
-    }
 }

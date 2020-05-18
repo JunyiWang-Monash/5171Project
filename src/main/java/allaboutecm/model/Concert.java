@@ -52,7 +52,9 @@ public class Concert extends Entity {
 
     public List<Musician> getMusiciansList() { return musicians; }
 
-    public void setMusiciansList(List<Musician> musicians) { this.musicians = musicians; }
+    public void setMusiciansList(List<Musician> musicians) {
+        notNull(musicians,"musicians list cannot be null");
+        this.musicians = musicians; }
 
     public String getCity() { return city; }
 

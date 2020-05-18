@@ -93,4 +93,11 @@ public class ConcertUnitTest {
         Exception e = assertThrows(NullPointerException.class,() -> concert.setConcertName(null));
         assertEquals("concert name cannot be null",e.getMessage());
     }
+
+    @Test
+    public void musiciansListCannotBeNull(){
+        Exception e = assertThrows(NullPointerException.class,() -> concert.setMusiciansList(null));
+        assertEquals("musicians list cannot be null",e.getMessage());
+    }
+
 }

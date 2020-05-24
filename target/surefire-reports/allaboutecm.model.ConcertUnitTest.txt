@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: allaboutecm.model.ConcertUnitTest
 -------------------------------------------------------------------------------
-Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.01 s - in allaboutecm.model.ConcertUnitTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in allaboutecm.model.ConcertUnitTest

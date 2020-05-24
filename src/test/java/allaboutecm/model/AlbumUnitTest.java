@@ -183,7 +183,7 @@ class AlbumUnitTest {
     public void testSetValidTracks()
     {
         Set<Track> str = Sets.newHashSet();
-        Track track = new Track("Before you die","26:10");
+        Track track = new Track("Before you die","26:10",1);
         str.add(track);
         album.setTracks(str);
         assertEquals(str,album.getTracks());

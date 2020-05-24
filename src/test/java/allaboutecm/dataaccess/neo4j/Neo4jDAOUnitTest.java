@@ -217,7 +217,7 @@ class Neo4jDAOUnitTest {
     public void successfulCreationOfAlbumWithTracks() throws IOException {
         assertEquals(0, dao.loadAll(Album.class).size());
         Album album = new Album(1975, "ECM 1064/65", "The Köln Concert");
-        Track track = new Track("SHE WAS YOUNG","09:33");
+        Track track = new Track("SHE WAS YOUNG","09:33",2);
         album.setTracks(Sets.newHashSet(track));
         dao.createOrUpdate(track);
         dao.createOrUpdate(album);
@@ -369,7 +369,7 @@ class Neo4jDAOUnitTest {
     @Test
     public void successfulCreationOfTrack() {
         assertEquals(0,dao.loadAll(Track.class).size());
-        Track track = new Track("SHE WAS YOUNG","09:33");
+        Track track = new Track("SHE WAS YOUNG","09:33",3);
         dao.createOrUpdate(track);
         assertEquals(1,dao.loadAll(Track.class).size());
         assertEquals("SHE WAS YOUNG",dao.loadAll(Track.class).iterator().next().getTrackName());
@@ -378,8 +378,8 @@ class Neo4jDAOUnitTest {
     @DisplayName("Successful update of track")
     @Test
     public void successfulUpdateOfTrack() {
-        Track track = new Track("SHE WAS YOUNG","09:33");
-        Track track1 = new Track("SHE WAS OLD","08:33");
+        Track track = new Track("SHE WAS YOUNG","09:33",2);
+        Track track1 = new Track("SHE WAS OLD","08:33",4);
         dao.createOrUpdate(track);
         dao.createOrUpdate(track1);
         track.setTrackName("INTO THE DREAMS");
@@ -389,8 +389,8 @@ class Neo4jDAOUnitTest {
     @DisplayName("Successful delete of track")
     @Test
     public void successfulDeleteOfTrack() {
-        Track track = new Track("SHE WAS YOUNG","09:33");
-        Track track1 = new Track("SHE WAS OLD","08:33");
+        Track track = new Track("SHE WAS YOUNG","09:33",1);
+        Track track1 = new Track("SHE WAS OLD","08:33",2);
         dao.createOrUpdate(track);
         dao.createOrUpdate(track1);
         assertEquals(2,dao.loadAll(Track.class).size());
@@ -401,8 +401,8 @@ class Neo4jDAOUnitTest {
     @DisplayName("Successful search of track")
     @Test
     public void successfulSearchOfTrack() {
-        Track track = new Track("SHE WAS YOUNG","09:33");
-        Track track1 = new Track("SHE WAS OLD","08:33");
+        Track track = new Track("SHE WAS YOUNG","09:33",2);
+        Track track1 = new Track("SHE WAS OLD","08:33",3);
         dao.createOrUpdate(track);
         dao.createOrUpdate(track1);
         Track track3 = dao.findTrackByName("SHE WAS OLD");

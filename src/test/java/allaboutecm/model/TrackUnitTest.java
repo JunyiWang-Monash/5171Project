@@ -17,7 +17,7 @@ public class TrackUnitTest {
 
     @BeforeEach
     public void setUp() {
-        track = new Track("Honey Fountain","04:34");
+        track = new Track("Honey Fountain","04:34",1);
     }
 
     @Test
@@ -76,5 +76,20 @@ public class TrackUnitTest {
         track.setLength("26:07");
         assertEquals("26:07",track.getLength());
     }
+
+    @Test
+    @DisplayName("Test set negative track number")
+    public void testSetNegativeTrackNumber(){
+        Exception e = assertThrows(IllegalArgumentException.class,() -> track.setTrackNumber(-4));
+        assertEquals("Track number cannot be zero or negative",e.getMessage());
+    }
+
+    @Test
+    @DisplayName("Test set zero track number")
+    public void testSetZeroTrackNumber(){
+        Exception e = assertThrows(IllegalArgumentException.class,() -> track.setTrackNumber(0));
+        assertEquals("Track number cannot be zero or negative",e.getMessage());
+    }
+
 
 }

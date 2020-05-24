@@ -22,18 +22,23 @@ public class Track extends Entity {
     @Property(name = "length")
     private String length;
 
+    @Property(name="trackNumber")
+    private int trackNumber;
 
 
-
-    public Track(String trackName, String length) {
+    public Track(String trackName, String length, int trackNumber) {
         notNull(length,"Track length cannot be null");
         notBlank(length,"Track length cannot be empty or blank");
 
         notNull(trackName,"Track name cannot be null");
         notBlank(trackName,"Track name cannot be empty or blank");
 
+        if(trackNumber <= 0)
+            throw new IllegalArgumentException("Track number cannot be zero or negative");
+
         this.trackName = trackName;
         this.length = length;
+        this.trackNumber = trackNumber;
 
     }
 
@@ -55,6 +60,17 @@ public class Track extends Entity {
         this.length = length;
     }
 
+    public int getTrackNumber() {
+        return trackNumber;
+    }
+
+    public void setTrackNumber(int trackNumber) {
+        if(trackNumber <= 0)
+        {
+            throw new IllegalArgumentException("Track number cannot be zero or negative");
+        }
+        this.trackNumber = trackNumber;
+    }
 
     @Override
     public boolean equals(Object o) {

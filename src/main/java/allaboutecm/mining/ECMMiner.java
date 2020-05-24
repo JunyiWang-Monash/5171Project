@@ -91,7 +91,6 @@ public class ECMMiner {
      *
      * @Param k the number of musicians to be returned.
      */
-
     public List<Musician> mostSocialMusicians(int k) {
         Collection<Musician> musicians = dao.loadAll(Musician.class);
         ListMultimap<Integer, Musician> nameMap = MultimapBuilder.treeKeys().arrayListValues().build();

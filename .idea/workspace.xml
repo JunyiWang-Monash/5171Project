@@ -7,7 +7,6 @@
       <change beforePath="$PROJECT_DIR$/../.idea/testing_assignment2.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/allaboutecm/mining/ECMMiner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/allaboutecm/mining/ECMMiner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/compiler.xml" beforeDir="false" />
@@ -397,6 +396,7 @@
       <workItem from="1590300478054" duration="2573000" />
       <workItem from="1590310950279" duration="2968000" />
       <workItem from="1590324387093" duration="187000" />
+      <workItem from="1590325754606" duration="22000" />
     </task>
     <servers />
   </component>
@@ -456,10 +456,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1589524238235" />
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1589791235718">
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1590325754939">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1589791235718" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1590325754939" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1589780977322">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

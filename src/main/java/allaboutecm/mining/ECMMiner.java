@@ -127,7 +127,6 @@ public class ECMMiner {
                     result1.add(musician1);
             }
         }
-       // result1.sort(Comparator.comparing(Musician::getName));
         return result1;
     }
 
@@ -167,9 +166,7 @@ public class ECMMiner {
                     result1.add(release);
             }
         }
-        //result1.sort(Ordering.natural());
         return result1;
-
     }
 
     //Added Code
@@ -202,7 +199,6 @@ public class ECMMiner {
                     result1.add(album);
             }
         }
-        //result1.sort(Comparator.comparing(Album::getAlbumName));
         return result1;
     }
 

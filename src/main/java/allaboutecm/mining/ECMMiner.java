@@ -83,7 +83,6 @@ public class ECMMiner {
                     result1.add(musician);
             }
         }
-        //result1.sort(Comparator.comparing(Musician::getName));
         return result1;
     }
 
@@ -202,7 +201,6 @@ public class ECMMiner {
         return result1;
     }
 
-    //Added Code//to be changed
     /**
      * Highest rated albums.
      * Extra Credit Part
@@ -242,11 +240,9 @@ public class ECMMiner {
                     result1.add(album);
             }
         }
-        //result1.sort(Comparator.comparing(Album::getAlbumName));
         return result1;
     }
 
-    //Correct code
     /**
      * Most similar albums to a give album. The similarity can be defined in a variety of ways.
      * For example, it can be defined over the musicians in albums, the similarity between names
@@ -287,7 +283,6 @@ public class ECMMiner {
                     result1.add(albumz);
             }
         }
-        //result1.sort(Comparator.comparing(Album::getAlbumName));
         return result1;
     }
 

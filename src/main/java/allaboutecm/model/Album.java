@@ -222,6 +222,7 @@ public class Album extends Entity {
         this.releaseFormat = releaseFormat;
     }
 
+    //getSales method
     public int getSales(){ return sales;
     }
 

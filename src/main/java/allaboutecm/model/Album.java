@@ -209,6 +209,7 @@ public class Album extends Entity {
         this.style = style.trim();
     }
 
+    //getReleaseFormat
     public List<String> getReleaseFormat(){  return releaseFormat;}
 
     public void setReleaseFormat(List<String> releaseFormat){

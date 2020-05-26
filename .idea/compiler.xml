@@ -6,11 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="FIT5171_2020_13" />
         <module name="fit5171-2020-13" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="fit5171-2020-13" target="1.8" />
+      <module name="FIT5171_2020_13" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

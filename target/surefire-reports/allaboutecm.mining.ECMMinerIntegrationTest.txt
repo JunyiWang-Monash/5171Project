@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: allaboutecm.mining.ECMMinerIntegrationTest
 -------------------------------------------------------------------------------
-Tests run: 20, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.461 s - in allaboutecm.mining.ECMMinerIntegrationTest
+Tests run: 20, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.719 s - in allaboutecm.mining.ECMMinerIntegrationTest

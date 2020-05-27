@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: allaboutecm.mining.ECMMinerUnitTest
 -------------------------------------------------------------------------------
-Tests run: 20, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.732 s - in allaboutecm.mining.ECMMinerUnitTest
+Tests run: 20, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.533 s - in allaboutecm.mining.ECMMinerUnitTest

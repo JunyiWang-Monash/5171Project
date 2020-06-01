@@ -34,6 +34,14 @@ public class TrackUnitTest {
         assertEquals("Track name cannot be null",e.getMessage());
     }
 
+    @Test
+    @DisplayName("Creating a track with zero track number")
+    public void creatingTrackWithZeroTrackNumber(){
+        Track track1;
+        Exception e = assertThrows(IllegalArgumentException.class,() -> new Track("Star Dust","02:40",0));
+        assertEquals("Track number cannot be zero or negative",e.getMessage());
+    }
+
     @ParameterizedTest
     @ValueSource(strings = {"", " ", "    \t"})
     @DisplayName("Track name cannot be empty or blank")

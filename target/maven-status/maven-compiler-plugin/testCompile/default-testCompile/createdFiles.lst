@@ -1,0 +1,10 @@
+allaboutecm\model\TrackUnitTest.class
+allaboutecm\model\MusicianInstrumentUnitTest.class
+allaboutecm\model\AlbumUnitTest.class
+allaboutecm\model\MusicianUnitTest.class
+allaboutecm\model\ReviewUnitTest.class
+allaboutecm\mining\ECMMinerIntegrationTest.class
+allaboutecm\dataaccess\neo4j\Neo4jDAOUnitTest.class
+allaboutecm\mining\ECMMinerUnitTest.class
+allaboutecm\model\MusicalInstrumentUnitTest.class
+allaboutecm\model\ConcertUnitTest.class

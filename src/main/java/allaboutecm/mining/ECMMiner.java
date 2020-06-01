@@ -90,39 +90,37 @@ public class ECMMiner {
      * Musicians that collaborate the most widely, by the number of other musicians they work with on albums.
      *
      * @Param k the number of musicians to be returned.
+     * Most social musicians to reduce code smell
      */
-    public List<Musician> mostSocialMusicians(int k) {
+    public List<Musician> mostSocialMusicians(int k){
         Collection<Musician> musicians = dao.loadAll(Musician.class);
         ListMultimap<Integer, Musician> nameMap = MultimapBuilder.treeKeys().arrayListValues().build();
-        for (Musician m : musicians) {
-            Set<Musician> cooperateMusicians = Sets.newHashSet();
-            Set<Album> musicianAlbums = m.getAlbums();
-            for (Album album : musicianAlbums) {
-                List<Musician> albumMusicians = album.getFeaturedMusicians();
-                for (Musician musician : albumMusicians) {
-                    if (musician.getName() != m.getName()) {
-                        if (cooperateMusicians.size() == 0) {
-                            cooperateMusicians.add(musician);
-                        } else if (!cooperateMusicians.contains(musician)) {
-                            cooperateMusicians.add(musician);
-                        }
-                    }
+        for(Musician musician:musicians){
+            Set<Album> albums = musician.getAlbums();
+            int collaborateNumber = 0;
+            int value = 0;
+            for(Album album:albums)
+            {
+                List<Musician> musicians1 = album.getFeaturedMusicians();
+                for(Musician musician1:musicians1){
+                    if (musician1.equals(musician))
+                        collaborateNumber = collaborateNumber + 1;
+                    if(collaborateNumber > value)
+                        value = collaborateNumber;
                 }
             }
-            int count = cooperateMusicians.size();
-            nameMap.put(count, m);
-
+            nameMap.put(value,musician);
         }
         List<Musician> result1 = Lists.newArrayList();
         List<Integer> sortedKeys1 = Lists.newArrayList(nameMap.keySet());
         sortedKeys1.sort(Ordering.natural().reverse());
         for (Integer count : sortedKeys1) {
-            List<Musician> musicians1 = nameMap.get(count);
-            for (Musician musician1 : musicians1) {
+            List<Musician> musicians2 = nameMap.get(count);
+            for (Musician musician2 : musicians2) {
                 if (result1.size() >= k) {
                     break;
                 } else
-                    result1.add(musician1);
+                    result1.add(musician2);
             }
         }
         return result1;

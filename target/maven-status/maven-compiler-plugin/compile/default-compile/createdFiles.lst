@@ -1,0 +1,12 @@
+allaboutecm\model\Concert.class
+allaboutecm\model\Review.class
+allaboutecm\model\Entity.class
+allaboutecm\dataaccess\neo4j\URLConverter.class
+allaboutecm\model\Musician.class
+allaboutecm\model\Track.class
+allaboutecm\model\MusicianInstrument.class
+allaboutecm\dataaccess\neo4j\Neo4jDAO.class
+allaboutecm\mining\ECMMiner.class
+allaboutecm\dataaccess\DAO.class
+allaboutecm\model\Album.class
+allaboutecm\model\MusicalInstrument.class

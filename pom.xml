@@ -41,6 +41,17 @@
                     <version>0.7</version>
                 </dependency>
                 </dependencies>
+                <configuration>
+                    <targetClasses>
+                        <param>allaboutecm.mining.*</param>
+                    </targetClasses>
+                    <targetTests>
+                        <param>allaboutecm.mining.*</param>
+                    </targetTests>
+                    <mutators>
+                        <mutator>CONDITIONALS_BOUNDARY</mutator>
+                    </mutators>
+                </configuration>
             </plugin>
         </plugins>
     </build>

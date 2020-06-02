@@ -1,6 +1,5 @@
 package allaboutecm.model;
 
-import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -10,7 +9,6 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import java.io.IOException;
-import java.util.List;
 import java.net.URL;
 import java.util.Set;
 
@@ -38,11 +36,27 @@ class MusicianUnitTest {
     }
 
     @ParameterizedTest
+    @ValueSource(strings = {"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"})
+    @DisplayName("Musician name length cannot be greater than or equal to 40")
+    public void musicianNameCannotBeGreaterThanOrEqualTo40(String args)
+    {
+        assertThrows(IllegalArgumentException.class,() -> new Musician(args));
+    }
+
+    @ParameterizedTest
     @ValueSource(strings = {"", " ", "    \t"})
     @DisplayName("Musician name cannot be empty or blank")
     public void musicianNameCannotBeEmptyOrBlank(String arg) {
         Exception e = assertThrows(IllegalArgumentException.class, () -> musician.setName(arg));
         assertEquals("Musician name cannot be empty or blank", e.getMessage());
+    }
+
+    @ParameterizedTest
+    @ValueSource(strings = {"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"})
+    @DisplayName("Set musician name length cannot be greater than or equal to 40")
+    public void SetMusicianNameCannotBeGreaterThanOrEqualTo40(String args)
+    {
+        assertThrows(IllegalArgumentException.class,() -> musician.setName(args));
     }
 
     @Test
@@ -79,8 +93,6 @@ class MusicianUnitTest {
     public Set<Album> settingUpTheAlbumSetWithAlbum() {
         Set<Album> test = Sets.newLinkedHashSet();
         Album album;
-        Set<Musician> musicians = Sets.newLinkedHashSet();
-        musicians.add(musician);
         album = new Album(2019, "ECM 2667", "Keith Jarrett");
         test.add(album);
         return test;

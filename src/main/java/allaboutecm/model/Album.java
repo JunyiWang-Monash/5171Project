@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.time.Year;
+import java.util.Calendar;
 import java.util.List;
 import java.util.Objects;
 import java.util.Set;
@@ -76,7 +77,10 @@ public class Album extends Entity {
 
         notBlank(recordNumber);
         notBlank(albumName);
-
+        if (releaseYear >= 1970 && releaseYear <= Year.now().getValue())
+            this.releaseYear = releaseYear;
+        else
+            throw new IllegalArgumentException("Year should be between 1970 - current year");
         this.releaseYear = releaseYear;
         this.recordNumber = recordNumber;
         this.albumName = albumName;
@@ -166,7 +170,7 @@ public class Album extends Entity {
         if (releaseYear >= 1970 && releaseYear <= Year.now().getValue())
             this.releaseYear = releaseYear;
         else
-            throw new IllegalArgumentException("Year should be of 4 digits and between 1700 - current year");
+            throw new IllegalArgumentException("Year should be between 1970 - current year");
     }
 
     public String getAlbumName() {

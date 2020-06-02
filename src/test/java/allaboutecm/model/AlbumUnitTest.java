@@ -9,8 +9,8 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.net.URL;
+import java.time.Year;
 import java.util.List;
 import java.util.Set;
 
@@ -29,6 +29,39 @@ class AlbumUnitTest {
     public void shouldConstructAlbumObject()
     {
         assertNotNull(album, "Album object cannot be null");
+    }
+
+    @ParameterizedTest
+    @ValueSource(ints = {1971,1970})
+    @DisplayName("Album release year should be greater than or equal 1970")
+    public void albumReleaseYearShouldBeGreaterThanOrEqualTo1970(int year)
+    {
+        Album album1 = new Album(year,"ECM 1090","ABCD");
+        assertNotNull(album1);
+    }
+
+    @Test
+    @DisplayName("Album release year cannot be less than 1970")
+    public void albumReleaseYearCannotBeLessThan1970()
+    {
+        assertThrows(IllegalArgumentException.class,() -> new Album(1969,"ECM 1090","ABCD"));
+    }
+
+    @Test
+    @DisplayName("Album release year cannot be greater than current year")
+    public void albumReleaseYearCannotBeGreaterThanCurrentYear()
+    {
+        int year = Year.now().getValue() + 1;
+        assertThrows(IllegalArgumentException.class,() -> new Album(year,"ECM 1090","ABCD"));
+    }
+
+    @Test
+    @DisplayName("Album release year should be less than or equal to current year")
+    public void albumReleaseYearShouldBeLessThanOrEqualToCurrentYear()
+    {
+        int year = Year.now().getValue();
+        Album album1 = new Album(year,"ECM 1090","ABCD");
+        assertNotNull(album1);
     }
 
     @Test
@@ -233,13 +266,12 @@ class AlbumUnitTest {
     @DisplayName("Set of reviews cannot contain null element")
     public void setOfReviewsCannotContainNullElement()
     {
-        Set<Review> reviews = Sets.newHashSet();
         Exception e = assertThrows(NullPointerException.class,() -> album.setReviews(null));
         assertEquals("Set of album reviews cannot be null",e.getMessage());
     }
 
     @DisplayName("Set up reviews set with a valid review")
-    public Set<Review> setUpValidReview() throws MalformedURLException {
+    public Set<Review> setUpValidReview() {
         Set<Review> reviews = Sets.newHashSet();
         Review review = new Review("Its an amazing Album",7);
         reviews.add(review);
@@ -248,7 +280,7 @@ class AlbumUnitTest {
 
     @Test
     @DisplayName("Set valid reviews")
-    public void setValidReviews() throws MalformedURLException {
+    public void setValidReviews() {
         Set<Review> reviews = setUpValidReview();
         album.setReviews(reviews);
         assertEquals(reviews,album.getReviews());

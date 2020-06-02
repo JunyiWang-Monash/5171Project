@@ -42,6 +42,8 @@ public class Musician extends Entity {
     public Musician(String name) {
         notNull(name);
         notBlank(name);
+        if (name.length() >= 40)
+            throw new IllegalArgumentException();
         this.name = name;
         this.musicianUrl = null;
         albums = Sets.newLinkedHashSet();
@@ -55,6 +57,8 @@ public class Musician extends Entity {
     public void setName(String name) {
         notNull(name,"Musician name cannot be null");
         notBlank(name,"Musician name cannot be empty or blank");
+        if (name.length() >= 40)
+            throw new IllegalArgumentException();
         this.name = name.trim();
     }
 

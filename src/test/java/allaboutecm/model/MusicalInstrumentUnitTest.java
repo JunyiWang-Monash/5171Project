@@ -1,7 +1,5 @@
 package allaboutecm.model;
 
-import org.checkerframework.common.value.qual.StaticallyExecutable;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -37,12 +35,27 @@ public class MusicalInstrumentUnitTest {
         assertEquals("Musical instrument name cannot be empty or blank",e.getMessage());
     }
 
+    @ParameterizedTest
+    @ValueSource(strings = {"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"})
+    @DisplayName("Musical instrument name length cannot be greater than or equal to 40")
+    public void musicalInstrumentNameCannotBeGreaterThanOrEqualTo40(String args)
+    {
+        assertThrows(IllegalArgumentException.class,() -> new MusicalInstrument(args));
+    }
+
+    @ParameterizedTest
+    @ValueSource(strings = {"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"})
+    @DisplayName("Set Musical instrument name length cannot be greater than or equal to 40")
+    public void SetMusicalInstrumentNameCannotBeGreaterThanOrEqualTo40(String args)
+    {
+        assertThrows(IllegalArgumentException.class,() -> musicalInstrument.setName(args));
+    }
+
     @Test
     public void setMusicalInstrumentName() {
         musicalInstrument.setName("Piano");
         assertEquals("Piano",musicalInstrument.getName(), "The name is functioning as expected");
     }
-
 
     @Test
     @DisplayName("Test set album name with leading and trailing spaces")

@@ -1,13 +1,10 @@
 package allaboutecm.model;
 
-import com.google.common.collect.Lists;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
-
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -37,7 +34,6 @@ public class TrackUnitTest {
     @Test
     @DisplayName("Creating a track with zero track number")
     public void creatingTrackWithZeroTrackNumber(){
-        Track track1;
         Exception e = assertThrows(IllegalArgumentException.class,() -> new Track("Star Dust","02:40",0));
         assertEquals("Track number cannot be zero or negative",e.getMessage());
     }

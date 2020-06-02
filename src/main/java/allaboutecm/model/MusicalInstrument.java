@@ -20,7 +20,10 @@ public class MusicalInstrument extends Entity {
     public MusicalInstrument(String name) {
         notNull(name,"Musical instrument name cannot be null");
         notBlank(name,"Musical instrument name cannot be empty or blank");
-        this.name = name;
+        if (name.length() >= 40){
+            throw new IllegalArgumentException();
+        }
+        this.name = name.trim();
     }
 
     public String getName() {
@@ -30,6 +33,9 @@ public class MusicalInstrument extends Entity {
     public void setName(String name) {
         notNull(name,"Musical instrument name cannot be null");
         notBlank(name,"Musical instrument name cannot be empty or blank");
+        if (name.length() >= 40){
+            throw new IllegalArgumentException();
+        }
         this.name = name.trim();
     }
 

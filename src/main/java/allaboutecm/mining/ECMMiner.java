@@ -111,6 +111,25 @@ public class ECMMiner {
             }
             nameMap.put(value,musician);
         }
+
+        List<Musician> result1 = socialduplicate(nameMap,k);
+
+        /*For Shivani
+        List<Integer> sortedKeys1 = Lists.newArrayList(nameMap.keySet());
+        sortedKeys1.sort(Ordering.natural().reverse());
+        for (Integer count : sortedKeys1) {
+            List<Musician> musicians2 = nameMap.get(count);
+            for (Musician musician2 : musicians2) {
+                if (result1.size() >= k) {
+                    break;
+                } else
+                    result1.add(musician2);
+            }
+         */
+        return result1;
+    }
+
+    public List<Musician> socialduplicate(ListMultimap<Integer, Musician> nameMap,int k){
         List<Musician> result1 = Lists.newArrayList();
         List<Integer> sortedKeys1 = Lists.newArrayList(nameMap.keySet());
         sortedKeys1.sort(Ordering.natural().reverse());
@@ -180,10 +199,10 @@ public class ECMMiner {
             sales = album.getSales();
             albumMap.put(sales,album);
         }
-        List<Album> result1 = Lists.newArrayList();
-        result1 = avoidDuplicacy(albumMap,k);
+        List<Album> result1 = avoidDuplicate(albumMap,k);
 
-        /*List<Integer> sortedKeys1 = Lists.newArrayList(albumMap.keySet());
+        /*For Shivani
+        List<Integer> sortedKeys1 = Lists.newArrayList(albumMap.keySet());
         sortedKeys1.sort(Ordering.natural().reverse());
         for (Integer rating : sortedKeys1) {
             List<Album> albums1 = albumMap.get(rating);
@@ -200,7 +219,7 @@ public class ECMMiner {
         return result1;
     }
 
-    public List<Album> avoidDuplicacy(ListMultimap<Integer, Album> albumMap,int k)
+    public List<Album> avoidDuplicate(ListMultimap<Integer, Album> albumMap, int k)
     {
         List<Album> result1 = Lists.newArrayList();
         List<Integer> sortedKeys1 = Lists.newArrayList(albumMap.keySet());
@@ -244,9 +263,8 @@ public class ECMMiner {
             averageRating = rating/count;
             albumMap.put(averageRating,album);
         }
-        List<Album> result1 = Lists.newArrayList();
-        result1 = avoidDuplicacy(albumMap,k);
-        /*
+        List<Album> result1 = avoidDuplicate(albumMap,k);
+        /*For Shivani
         List<Integer> sortedKeys1 = Lists.newArrayList(albumMap.keySet());
         sortedKeys1.sort(Ordering.natural().reverse());
         for (Integer rating : sortedKeys1) {

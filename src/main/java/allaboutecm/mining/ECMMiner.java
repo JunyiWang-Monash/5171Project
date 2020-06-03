@@ -181,6 +181,28 @@ public class ECMMiner {
             albumMap.put(sales,album);
         }
         List<Album> result1 = Lists.newArrayList();
+        result1 = avoidDuplicacy(albumMap,k);
+
+        /*List<Integer> sortedKeys1 = Lists.newArrayList(albumMap.keySet());
+        sortedKeys1.sort(Ordering.natural().reverse());
+        for (Integer rating : sortedKeys1) {
+            List<Album> albums1 = albumMap.get(rating);
+            for(Album album:albums1)
+            {
+                if (result1.size() >= k)
+                {
+                    break;
+                }
+                else
+                    result1.add(album);
+            }
+        }*/
+        return result1;
+    }
+
+    public List<Album> avoidDuplicacy(ListMultimap<Integer, Album> albumMap,int k)
+    {
+        List<Album> result1 = Lists.newArrayList();
         List<Integer> sortedKeys1 = Lists.newArrayList(albumMap.keySet());
         sortedKeys1.sort(Ordering.natural().reverse());
         for (Integer rating : sortedKeys1) {
@@ -223,6 +245,8 @@ public class ECMMiner {
             albumMap.put(averageRating,album);
         }
         List<Album> result1 = Lists.newArrayList();
+        result1 = avoidDuplicacy(albumMap,k);
+        /*
         List<Integer> sortedKeys1 = Lists.newArrayList(albumMap.keySet());
         sortedKeys1.sort(Ordering.natural().reverse());
         for (Integer rating : sortedKeys1) {
@@ -236,7 +260,7 @@ public class ECMMiner {
                 else
                     result1.add(album);
             }
-        }
+        }*/
         return result1;
     }
 

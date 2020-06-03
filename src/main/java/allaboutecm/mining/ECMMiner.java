@@ -3,17 +3,10 @@ package allaboutecm.mining;
 import allaboutecm.dataaccess.DAO;
 import allaboutecm.model.*;
 import com.google.common.collect.*;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.*;
 
-/**
- * TODO: implement and test the methods in this class.
- * Note that you can extend the Neo4jDAO class to make implementing this class easier.
- */
 public class ECMMiner {
-    private static Logger logger = LoggerFactory.getLogger(ECMMiner.class);
 
     private final DAO dao;
 
@@ -112,7 +105,7 @@ public class ECMMiner {
             nameMap.put(value,musician);
         }
 
-        List<Musician> result1 = socialduplicate(nameMap,k);
+        List<Musician> result1 = socialComplexity(nameMap,k);
 
         /*For Shivani
         List<Integer> sortedKeys1 = Lists.newArrayList(nameMap.keySet());
@@ -129,7 +122,7 @@ public class ECMMiner {
         return result1;
     }
 
-    public List<Musician> socialduplicate(ListMultimap<Integer, Musician> nameMap,int k){
+    public List<Musician> socialComplexity(ListMultimap<Integer, Musician> nameMap,int k){
         List<Musician> result1 = Lists.newArrayList();
         List<Integer> sortedKeys1 = Lists.newArrayList(nameMap.keySet());
         sortedKeys1.sort(Ordering.natural().reverse());
@@ -308,6 +301,25 @@ public class ECMMiner {
             }
             similarMap.put(count,album);
         }
+        List<Album> result1 = similarCognitive(similarMap,k);
+        /*
+        List<Integer> sortedKeys1 = Lists.newArrayList(similarMap.keySet());
+        sortedKeys1.sort(Ordering.natural().reverse());
+        for (Integer similar : sortedKeys1) {
+            List<Album> albums12 = similarMap.get(similar);
+            for(Album albumz:albums12){
+                if(result1.size()>=k)
+                {
+                    break;
+                }
+                else
+                    result1.add(albumz);
+            }
+        }*/
+        return result1;
+    }
+
+    public List<Album> similarCognitive(ListMultimap<Integer, Album> similarMap,int k){
         List<Album> result1 = Lists.newArrayList();
         List<Integer> sortedKeys1 = Lists.newArrayList(similarMap.keySet());
         sortedKeys1.sort(Ordering.natural().reverse());

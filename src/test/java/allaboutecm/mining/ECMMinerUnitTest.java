@@ -8,6 +8,8 @@ import com.google.common.collect.Sets;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import java.util.List;
 import java.util.Set;
@@ -16,9 +18,6 @@ import static org.mockito.Mockito.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-/**
- * TODO: perform unit testing on the ECMMiner class, by making use of mocking.
- */
 class ECMMinerUnitTest {
     private DAO dao;
     private ECMMiner ecmMiner;
@@ -31,8 +30,9 @@ class ECMMinerUnitTest {
     }
 
     @DisplayName("Should not return any musician if k is zero or negative")
-    @Test
-    public void shouldNotReturnAnyMusicianWhenKIsZeroOrNegative() {
+    @ParameterizedTest
+    @ValueSource(ints = {0,-1})
+    public void shouldNotReturnAnyMusicianWhenKIsZeroOrNegative(int a) {
         Album album = new Album(1975, "ECM 1064/65", "The Köln Concert");
         Musician musician = new Musician("Keith Jarrett");
         Album album1 = new Album(1975, "ECM 1080", "Dark Knight");
@@ -46,7 +46,7 @@ class ECMMinerUnitTest {
         musicians.add(musician);
         musicians.add(musician1);
         when(dao.loadAll(Musician.class)).thenReturn(musicians);
-        List<Musician> musicians1 = ecmMiner.mostProlificMusicians(0, 1974, 1976);
+        List<Musician> musicians1 = ecmMiner.mostProlificMusicians(a, 1974, 1976);
         assertEquals(0, musicians1.size());
     }
 
@@ -103,14 +103,15 @@ class ECMMinerUnitTest {
     }
 
     @DisplayName("Should not return the most social musician when k is zero or negative")
-    @Test
-    public void shouldNotReturnReturnTheMostSocialMusicianWhenKIsZeroOrNegative() {
+    @ParameterizedTest
+    @ValueSource(ints = {0,-1})
+    public void shouldNotReturnReturnTheMostSocialMusicianWhenKIsZeroOrNegative(int a) {
         Album album = new Album(1975, "ECM 1064/65", "The Köln Concert");
         Musician musician = new Musician("Keith Jarrett");
         musician.setAlbums(Sets.newHashSet(album));
         when(dao.loadAll(Musician.class)).thenReturn(Sets.newHashSet(musician));
 
-        List<Musician> musicians = ecmMiner.mostSocialMusicians(0);
+        List<Musician> musicians = ecmMiner.mostSocialMusicians(a);
 
         assertEquals(0, musicians.size());
     }
@@ -160,13 +161,14 @@ class ECMMinerUnitTest {
     }
 
     @DisplayName("Should not return any talented musician when k is zero or negative")
-    @Test
-    public void shouldNotReturnAnyTalentedMusicianWhenKIsZeroOrNegative(){
+    @ParameterizedTest
+    @ValueSource(ints = {0,-1})
+    public void shouldNotReturnAnyTalentedMusicianWhenKIsZeroOrNegative(int a){
         Musician musician= new Musician("Keith Jarrett");
         MusicalInstrument musicalInstrument = new MusicalInstrument("Violin");
         MusicianInstrument musicianInstrument = new MusicianInstrument(musician,Sets.newHashSet(musicalInstrument));
         when(dao.loadAll(MusicianInstrument.class)).thenReturn(Sets.newHashSet(musicianInstrument));
-        List<Musician> musicians = ecmMiner.mostTalentedMusicians(0);
+        List<Musician> musicians = ecmMiner.mostTalentedMusicians(a);
         assertEquals(0,musicians.size());
     }
 
@@ -201,8 +203,9 @@ class ECMMinerUnitTest {
     }
 
     @DisplayName("Should not return any similar album if the value of k is zero or negative")
-    @Test
-    public void shouldNotReturnAnySimilarAlbumIfTheValueOfKIsZeroOrNegative() {
+    @ParameterizedTest
+    @ValueSource(ints = {0,-1})
+    public void shouldNotReturnAnySimilarAlbumIfTheValueOfKIsZeroOrNegative(int a) {
         Album album = new Album(1975, "ECM 1064/65", "The Köln Concert");
         Album album1 = new Album(1976, "ECM 1080", "The Köln Concert12");
         Musician musician= new Musician("Keith Jarrett");
@@ -210,7 +213,7 @@ class ECMMinerUnitTest {
         Set<Album> albums = Sets.newHashSet();
         albums.add(album);
         when(dao.loadAll(Album.class)).thenReturn(albums);
-        List<Album> similarAlbums = ecmMiner.mostSimilarAlbums(0,album1);
+        List<Album> similarAlbums = ecmMiner.mostSimilarAlbums(a,album1);
         assertEquals(0,similarAlbums.size());
     }
 
@@ -264,13 +267,14 @@ class ECMMinerUnitTest {
     }
 
     @DisplayName("Should not return the busiest year when k is zero or negative")
-    @Test
-    public void shouldNotReturnTheBusiestYearWhenKIsZeroOrNegative() {
+    @ParameterizedTest
+    @ValueSource(ints = {0,-1})
+    public void shouldNotReturnTheBusiestYearWhenKIsZeroOrNegative(int a) {
         Album album = new Album(1975, "ECM 1064/65", "The Köln Concert");
         Set<Album> albums = Sets.newHashSet();
         albums.add(album);
         when(dao.loadAll(Album.class)).thenReturn(albums);
-        List<Integer> busiestYears = ecmMiner.busiestYear(0);
+        List<Integer> busiestYears = ecmMiner.busiestYear(a);
         assertEquals(0,busiestYears.size());
     }
 
@@ -302,20 +306,21 @@ class ECMMinerUnitTest {
     public void shouldReturnTheBestSellingAlbumsWhenThereIsOnlyOne() {
         Album album = new Album(1975, "ECM 1064/65", "The Köln Concert");
         album.setSales(50);
-        when(dao.loadAll(Album.class)).thenReturn(Sets.newHashSet(album));;
+        when(dao.loadAll(Album.class)).thenReturn(Sets.newHashSet(album));
         List<Album> albums = ecmMiner.bestSellingAlbums(3);
         assertEquals(50,albums.iterator().next().getSales());
     }
     // Extra Credit
     @DisplayName("Should not return the best-selling albums when k is 0 or negative")
-    @Test
-    public void shouldNotReturnTheBestSellingAlbumsWhenKIsZeroOrNegative() {
+    @ParameterizedTest
+    @ValueSource(ints = {0,-1})
+    public void shouldNotReturnTheBestSellingAlbumsWhenKIsZeroOrNegative(int a) {
         Album album = new Album(1975, "ECM 1064/65", "The Köln Concert");
         album.setSales(50);
         Set<Album> albums = Sets.newHashSet();
         albums.add(album);
         when(dao.loadAll(Album.class)).thenReturn(albums);
-        List<Album> albums1 = ecmMiner.bestSellingAlbums(0);
+        List<Album> albums1 = ecmMiner.bestSellingAlbums(a);
         assertEquals(0,albums1.size());
     }
     // Extra Credit
@@ -368,8 +373,9 @@ class ECMMinerUnitTest {
 
     // Extra Credit
     @DisplayName("Should not return the highest rated albums when k is 0 or negative")
-    @Test
-    public void shouldNotReturnTheHighestRatedAlbumsWhenKIsZeroOrNegative() {
+    @ParameterizedTest
+    @ValueSource(ints = {0,-1})
+    public void shouldNotReturnTheHighestRatedAlbumsWhenKIsZeroOrNegative(int a) {
         Album album = new Album(1975, "ECM 1064/65", "The Köln Concert");
         Set<Review> reviews = Sets.newHashSet();
         Review review = new Review("Very nice",9);
@@ -380,7 +386,7 @@ class ECMMinerUnitTest {
         Set<Album> albums = Sets.newHashSet();
         albums.add(album);
         when(dao.loadAll(Album.class)).thenReturn(albums);
-        List<Album> albums1 = ecmMiner.highestRatedAlbums(0);
+        List<Album> albums1 = ecmMiner.highestRatedAlbums(a);
         assertEquals(0,albums1.size());
     }
 

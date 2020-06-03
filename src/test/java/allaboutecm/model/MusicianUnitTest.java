@@ -36,14 +36,6 @@ class MusicianUnitTest {
     }
 
     @ParameterizedTest
-    @ValueSource(strings = {"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"})
-    @DisplayName("Musician name length cannot be greater than or equal to 40")
-    public void musicianNameCannotBeGreaterThanOrEqualTo40(String args)
-    {
-        assertThrows(IllegalArgumentException.class,() -> new Musician(args));
-    }
-
-    @ParameterizedTest
     @ValueSource(strings = {"", " ", "    \t"})
     @DisplayName("Musician name cannot be empty or blank")
     public void musicianNameCannotBeEmptyOrBlank(String arg) {
@@ -53,8 +45,16 @@ class MusicianUnitTest {
 
     @ParameterizedTest
     @ValueSource(strings = {"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"})
-    @DisplayName("Set musician name length cannot be greater than or equal to 40")
-    public void SetMusicianNameCannotBeGreaterThanOrEqualTo40(String args)
+    @DisplayName("Musician name length cannot be greater than or equal to 40")
+    public void musicianNameCannotBeGreaterThanOrEqualTo40(String args)
+    {
+        assertThrows(IllegalArgumentException.class,() -> new Musician(args));
+    }
+
+    @ParameterizedTest
+    @ValueSource(strings = {"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"})
+    @DisplayName("Set Musical instrument name length cannot be greater than or equal to 40")
+    public void setMusicianNameCannotBeGreaterThanOrEqualTo40(String args)
     {
         assertThrows(IllegalArgumentException.class,() -> musician.setName(args));
     }
@@ -97,6 +97,8 @@ class MusicianUnitTest {
         test.add(album);
         return test;
     }
+
+
 
     @Test
     public void testSetAlbums()

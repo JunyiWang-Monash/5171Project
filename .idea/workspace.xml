@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c650e90-aacb-4562-bd4d-d1e43bc6ee9e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/testing_assignment2.iml" beforeDir="false" />
@@ -9,15 +10,10 @@
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/allaboutecm/model/Album.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/allaboutecm/model/Album.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/allaboutecm/model/MusicalInstrument.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/allaboutecm/model/MusicalInstrument.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/allaboutecm/model/Musician.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/allaboutecm/model/Musician.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/allaboutecm/model/AlbumUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/allaboutecm/model/AlbumUnitTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/allaboutecm/model/MusicalInstrumentUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/allaboutecm/model/MusicalInstrumentUnitTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/allaboutecm/mining/ECMMinerIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/allaboutecm/mining/ECMMinerIntegrationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/allaboutecm/mining/ECMMinerUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/allaboutecm/mining/ECMMinerUnitTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/allaboutecm/model/MusicianUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/allaboutecm/model/MusicianUnitTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/allaboutecm/model/TrackUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/allaboutecm/model/TrackUnitTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/allaboutecm/model/Album.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/allaboutecm/model/Album.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/allaboutecm/model/MusicalInstrument.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/allaboutecm/model/MusicalInstrument.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/allaboutecm/model/Musician.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/allaboutecm/model/Musician.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-allaboutecm.dataaccess.neo4j.Neo4jDAOUnitTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-allaboutecm.dataaccess.neo4j.Neo4jDAOUnitTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-allaboutecm.mining.ECMMinerIntegrationTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-allaboutecm.mining.ECMMinerIntegrationTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-allaboutecm.mining.ECMMinerUnitTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-allaboutecm.mining.ECMMinerUnitTest.xml" afterDir="false" />
@@ -32,16 +28,13 @@
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/allaboutecm.mining.ECMMinerIntegrationTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/allaboutecm.mining.ECMMinerIntegrationTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/allaboutecm.mining.ECMMinerUnitTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/allaboutecm.mining.ECMMinerUnitTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/allaboutecm.model.AlbumUnitTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/allaboutecm.model.AlbumUnitTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/allaboutecm.model.ConcertUnitTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/allaboutecm.model.ConcertUnitTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/allaboutecm.model.MusicalInstrumentUnitTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/allaboutecm.model.MusicalInstrumentUnitTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/allaboutecm.model.MusicianInstrumentUnitTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/allaboutecm.model.MusicianInstrumentUnitTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/allaboutecm.model.MusicianUnitTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/allaboutecm.model.MusicianUnitTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/allaboutecm.model.ReviewUnitTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/allaboutecm.model.ReviewUnitTest.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/allaboutecm.model.TrackUnitTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/allaboutecm.model.TrackUnitTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/allaboutecm/model/AlbumUnitTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/allaboutecm/model/AlbumUnitTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/allaboutecm/model/MusicalInstrumentUnitTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/allaboutecm/model/MusicalInstrumentUnitTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/allaboutecm/mining/ECMMinerIntegrationTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/allaboutecm/mining/ECMMinerIntegrationTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/allaboutecm/mining/ECMMinerUnitTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/allaboutecm/mining/ECMMinerUnitTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/allaboutecm/model/MusicianUnitTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/allaboutecm/model/MusicianUnitTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/allaboutecm/model/TrackUnitTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/allaboutecm/model/TrackUnitTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/compiler.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/encodings.xml" beforeDir="false" />
@@ -270,106 +263,98 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../FIT5171_2020_12/FIT5171/assignment1" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
-  <component name="RunManager" selected="JUnit.MusicianUnitTest">
-    <configuration name="AlbumUnitTest.albumReleaseYearCannotBeGreaterThanCurrentYear" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ECMMinerIntegrationTest">
+    <configuration name="ECMMinerIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="fit5171-2020-13" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="allaboutecm.model.*" />
+          <option name="PATTERN" value="allaboutecm.mining.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="allaboutecm.model" />
-      <option name="MAIN_CLASS_NAME" value="allaboutecm.model.AlbumUnitTest" />
-      <option name="METHOD_NAME" value="albumReleaseYearCannotBeGreaterThanCurrentYear" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AlbumUnitTest.albumReleaseYearShouldBeLessThan1970 (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="fit5171-2020-13" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="allaboutecm.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="allaboutecm.model" />
-      <option name="MAIN_CLASS_NAME" value="allaboutecm.model.AlbumUnitTest" />
-      <option name="METHOD_NAME" value="albumReleaseYearShouldBeLessThan1970" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MusicalInstrumentUnitTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="fit5171-2020-13" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="allaboutecm.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="allaboutecm.model" />
-      <option name="MAIN_CLASS_NAME" value="allaboutecm.model.MusicalInstrumentUnitTest" />
+      <option name="PACKAGE_NAME" value="allaboutecm.mining" />
+      <option name="MAIN_CLASS_NAME" value="allaboutecm.mining.ECMMinerIntegrationTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MusicianUnitTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ECMMinerIntegrationTest.shouldNotReturnAnySimilarAlbumIfTheValueOfKIsZeroOrNegative" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="fit5171-2020-13" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="allaboutecm.model.*" />
+          <option name="PATTERN" value="allaboutecm.mining.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="allaboutecm.model" />
-      <option name="MAIN_CLASS_NAME" value="allaboutecm.model.MusicianUnitTest" />
+      <option name="PACKAGE_NAME" value="allaboutecm.mining" />
+      <option name="MAIN_CLASS_NAME" value="allaboutecm.mining.ECMMinerIntegrationTest" />
+      <option name="METHOD_NAME" value="shouldNotReturnAnySimilarAlbumIfTheValueOfKIsZeroOrNegative" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ECMMinerUnitTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="fit5171-2020-13" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="allaboutecm.mining.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="allaboutecm.mining" />
+      <option name="MAIN_CLASS_NAME" value="allaboutecm.mining.ECMMinerUnitTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="[Local] MusicalInstrumentUnitTest.musicalInstrumentNameCannotBeGreaterThanOrEqualTo40" type="aws.lambda" factoryName="Local" temporary="true" nameIsGenerated="true">
-      <option name="credentialProviderId" />
-      <option name="regionId" value="us-east-1" />
-      <option name="debugHost" value="localhost" />
-      <option name="environmentVariables">
-        <map />
-      </option>
-      <option name="handler" value="allaboutecm.model.MusicalInstrumentUnitTest::musicalInstrumentNameCannotBeGreaterThanOrEqualTo40" />
-      <option name="logicalFunctionName" />
-      <option name="memorySize" value="128" />
-      <option name="runtime" value="java8" />
-      <option name="templateFile" />
-      <option name="timeout" value="300" />
-      <option name="useTemplate" value="false" />
-      <option name="input" />
-      <option name="inputIsFile" value="false" />
-      <sam>
-        <option name="additionalBuildArgs" />
-        <option name="additionalLocalArgs" />
-        <option name="buildInContainer" value="false" />
-        <option name="dockerNetwork" />
-        <option name="skipImagePull" value="false" />
-      </sam>
-      <method v="2" />
+    <configuration name="ECMMinerUnitTest.shouldNotReturnTheBestSellingAlbumsWhenKIsZeroOrNegative" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="fit5171-2020-13" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="allaboutecm.mining.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="allaboutecm.mining" />
+      <option name="MAIN_CLASS_NAME" value="allaboutecm.mining.ECMMinerUnitTest" />
+      <option name="METHOD_NAME" value="shouldNotReturnTheBestSellingAlbumsWhenKIsZeroOrNegative(int)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ECMMinerUnitTest.shouldNotReturnTheBusiestYearWhenKIsZeroOrNegative" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="fit5171-2020-13" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="allaboutecm.mining.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="allaboutecm.mining" />
+      <option name="MAIN_CLASS_NAME" value="allaboutecm.mining.ECMMinerUnitTest" />
+      <option name="METHOD_NAME" value="shouldNotReturnTheBusiestYearWhenKIsZeroOrNegative(int)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MusicianUnitTest" />
-        <item itemvalue="JUnit.MusicalInstrumentUnitTest" />
-        <item itemvalue="AWS Lambda.[Local] MusicalInstrumentUnitTest.musicalInstrumentNameCannotBeGreaterThanOrEqualTo40" />
-        <item itemvalue="JUnit.AlbumUnitTest.albumReleaseYearCannotBeGreaterThanCurrentYear" />
-        <item itemvalue="JUnit.AlbumUnitTest.albumReleaseYearShouldBeLessThan1970 (1)" />
+        <item itemvalue="JUnit.ECMMinerIntegrationTest" />
+        <item itemvalue="JUnit.ECMMinerIntegrationTest.shouldNotReturnAnySimilarAlbumIfTheValueOfKIsZeroOrNegative" />
+        <item itemvalue="JUnit.ECMMinerUnitTest" />
+        <item itemvalue="JUnit.ECMMinerUnitTest.shouldNotReturnTheBestSellingAlbumsWhenKIsZeroOrNegative" />
+        <item itemvalue="JUnit.ECMMinerUnitTest.shouldNotReturnTheBusiestYearWhenKIsZeroOrNegative" />
       </list>
     </recent_temporary>
   </component>
@@ -432,6 +417,8 @@
       <workItem from="1591002162823" duration="9622000" />
       <workItem from="1591077630305" duration="925000" />
       <workItem from="1591085801377" duration="5691000" />
+      <workItem from="1591103119206" duration="4744000" />
+      <workItem from="1591147147247" duration="2742000" />
     </task>
     <servers />
   </component>
@@ -459,22 +446,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1591089334822" />
-    <state width="1478" height="223" key="GridCell.Tab.0.bottom" timestamp="1591094259565">
+    <state width="1478" height="223" key="GridCell.Tab.0.bottom" timestamp="1591152509933">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1478" height="223" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591094259565" />
-    <state width="1478" height="223" key="GridCell.Tab.0.center" timestamp="1591094259565">
+    <state width="1478" height="223" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591152509933" />
+    <state width="1478" height="223" key="GridCell.Tab.0.center" timestamp="1591152509933">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1478" height="223" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1591094259565" />
-    <state width="1478" height="223" key="GridCell.Tab.0.left" timestamp="1591094259564">
+    <state width="1478" height="223" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1591152509933" />
+    <state width="1478" height="223" key="GridCell.Tab.0.left" timestamp="1591152509933">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1478" height="223" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1591094259564" />
-    <state width="1478" height="223" key="GridCell.Tab.0.right" timestamp="1591094259565">
+    <state width="1478" height="223" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1591152509933" />
+    <state width="1478" height="223" key="GridCell.Tab.0.right" timestamp="1591152509933">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1478" height="223" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1591094259565" />
+    <state width="1478" height="223" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1591152509933" />
     <state width="1478" height="266" key="GridCell.Tab.1.bottom" timestamp="1591013559224">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -495,10 +482,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1589524238235" />
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1591085801682">
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1591147147233">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1591085801682" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1591147147233" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1589780977322">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

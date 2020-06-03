@@ -12,7 +12,6 @@ import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.time.Year;
-import java.util.Calendar;
 import java.util.List;
 import java.util.Objects;
 import java.util.Set;
@@ -68,9 +67,6 @@ public class Album extends Entity {
     @Property(name="sales")
     private int sales;
 
-    public Album() {
-    }
-
     public Album(int releaseYear, String recordNumber, String albumName) {
         notNull(recordNumber);
         notNull(albumName);
@@ -81,7 +77,6 @@ public class Album extends Entity {
             this.releaseYear = releaseYear;
         else
             throw new IllegalArgumentException("Year should be between 1970 - current year");
-        this.releaseYear = releaseYear;
         this.recordNumber = recordNumber;
         this.albumName = albumName;
 

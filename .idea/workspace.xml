@@ -7,27 +7,38 @@
       <change beforePath="$PROJECT_DIR$/../.idea/testing_assignment2.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/allaboutecm/mining/ECMMiner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/allaboutecm/mining/ECMMiner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/allaboutecm/mining/ECMMiner.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/allaboutecm/mining/ECMMiner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-allaboutecm.dataaccess.neo4j.Neo4jDAOUnitTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-allaboutecm.dataaccess.neo4j.Neo4jDAOUnitTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-allaboutecm.mining.ECMMinerIntegrationTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-allaboutecm.mining.ECMMinerIntegrationTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-allaboutecm.mining.ECMMinerUnitTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-allaboutecm.mining.ECMMinerUnitTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-allaboutecm.model.AlbumUnitTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-allaboutecm.model.AlbumUnitTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-allaboutecm.model.ConcertUnitTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-allaboutecm.model.ConcertUnitTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-allaboutecm.model.MusicalInstrumentUnitTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-allaboutecm.model.MusicalInstrumentUnitTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-allaboutecm.model.MusicianInstrumentUnitTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-allaboutecm.model.MusicianInstrumentUnitTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-allaboutecm.model.MusicianUnitTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-allaboutecm.model.MusicianUnitTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-allaboutecm.model.ReviewUnitTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-allaboutecm.model.ReviewUnitTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-allaboutecm.model.TrackUnitTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-allaboutecm.model.TrackUnitTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/allaboutecm.dataaccess.neo4j.Neo4jDAOUnitTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/allaboutecm.dataaccess.neo4j.Neo4jDAOUnitTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/allaboutecm.mining.ECMMinerIntegrationTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/allaboutecm.mining.ECMMinerIntegrationTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/allaboutecm.mining.ECMMinerUnitTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/allaboutecm.mining.ECMMinerUnitTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/allaboutecm.model.AlbumUnitTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/allaboutecm.model.AlbumUnitTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/allaboutecm.model.ConcertUnitTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/allaboutecm.model.ConcertUnitTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/allaboutecm.model.MusicalInstrumentUnitTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/allaboutecm.model.MusicalInstrumentUnitTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/allaboutecm.model.MusicianUnitTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/allaboutecm.model.MusicianUnitTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/allaboutecm.model.ReviewUnitTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/allaboutecm.model.ReviewUnitTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/allaboutecm.model.TrackUnitTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/allaboutecm.model.TrackUnitTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-allaboutecm.dataaccess.neo4j.Neo4jDAOUnitTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-allaboutecm.mining.ECMMinerIntegrationTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-allaboutecm.mining.ECMMinerUnitTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-allaboutecm.model.AlbumUnitTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-allaboutecm.model.ConcertUnitTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-allaboutecm.model.MusicalInstrumentUnitTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-allaboutecm.model.MusicianInstrumentUnitTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-allaboutecm.model.MusicianUnitTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-allaboutecm.model.ReviewUnitTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-allaboutecm.model.TrackUnitTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/allaboutecm.dataaccess.neo4j.Neo4jDAOUnitTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/allaboutecm.mining.ECMMinerIntegrationTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/allaboutecm.mining.ECMMinerUnitTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/allaboutecm.model.AlbumUnitTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/allaboutecm.model.ConcertUnitTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/allaboutecm.model.MusicalInstrumentUnitTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/allaboutecm.model.MusicianInstrumentUnitTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/allaboutecm.model.MusicianUnitTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/allaboutecm.model.ReviewUnitTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/allaboutecm.model.TrackUnitTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/allaboutecm/dataaccess/neo4j/Neo4jDAOUnitTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/allaboutecm/mining/ECMMinerIntegrationTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/allaboutecm/mining/ECMMinerUnitTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/allaboutecm/model/AlbumUnitTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/allaboutecm/model/ConcertUnitTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/allaboutecm/model/MusicalInstrumentUnitTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/allaboutecm/model/MusicianInstrumentUnitTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/allaboutecm/model/MusicianUnitTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/allaboutecm/model/ReviewUnitTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/allaboutecm/model/TrackUnitTest.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/compiler.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../FIT5171_2020_13_Assignment2/.idea/encodings.xml" beforeDir="false" />
@@ -414,6 +425,9 @@
       <workItem from="1591147147247" duration="2742000" />
       <workItem from="1591186709547" duration="3881000" />
       <workItem from="1591194999467" duration="386000" />
+      <workItem from="1591265658425" duration="1198000" />
+      <workItem from="1591366711805" duration="2078000" />
+      <workItem from="1591371005967" duration="81000" />
     </task>
     <servers />
   </component>
@@ -441,22 +455,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1591089334822" />
-    <state width="1478" height="421" key="GridCell.Tab.0.bottom" timestamp="1591195384790">
+    <state width="1478" height="442" key="GridCell.Tab.0.bottom" timestamp="1591371411198">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1478" height="421" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591195384790" />
-    <state width="1478" height="421" key="GridCell.Tab.0.center" timestamp="1591195384789">
+    <state width="1478" height="442" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591371411198" />
+    <state width="1478" height="442" key="GridCell.Tab.0.center" timestamp="1591371411198">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1478" height="421" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1591195384789" />
-    <state width="1478" height="421" key="GridCell.Tab.0.left" timestamp="1591195384788">
+    <state width="1478" height="442" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1591371411198" />
+    <state width="1478" height="442" key="GridCell.Tab.0.left" timestamp="1591371411198">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1478" height="421" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1591195384788" />
-    <state width="1478" height="421" key="GridCell.Tab.0.right" timestamp="1591195384789">
+    <state width="1478" height="442" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1591371411198" />
+    <state width="1478" height="442" key="GridCell.Tab.0.right" timestamp="1591371411198">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1478" height="421" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1591195384789" />
+    <state width="1478" height="442" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1591371411198" />
     <state width="1478" height="266" key="GridCell.Tab.1.bottom" timestamp="1591013559224">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -477,10 +491,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="277" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1589524238235" />
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1591194999360">
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1591371336609">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1591194999360" />
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1591371336609" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1589780977322">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

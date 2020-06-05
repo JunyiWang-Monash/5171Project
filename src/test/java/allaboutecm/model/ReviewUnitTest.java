@@ -46,14 +46,14 @@ public class ReviewUnitTest {
     }
 
     @Test
-    @DisplayName("Test set invalid musical URL")
-    public void testSetInvalidMusicalURL() throws IOException {
+    @DisplayName("Test set invalid review URL")
+    public void testSetInvalidURL() throws IOException {
         URL url = new URL("https://www.jetbrains.com/idea/abc");
         assertThrows(IllegalArgumentException.class,() -> review.setWebsiteURL(url));
     }
 
     @Test
-    @DisplayName("Test set valid album URL")
+    @DisplayName("Test set valid review URL")
     public void testSetValidMusicalURL() throws IOException {
         URL url = new URL("https://www.jetbrains.com/idea");
         review.setWebsiteURL(url);
@@ -89,4 +89,60 @@ public class ReviewUnitTest {
         assertEquals("Its an amazing album",review.getAlbumReview());
     }
 
+    //mutation kill
+    @Test
+    @DisplayName("Review with same album review and rating mean same review")
+    public void reviewWithSameAlbumReviewAndRatingMeanSameReview()
+    {
+        Review review = new Review("Nice album",9);
+        Review review1 = new Review("Nice album",9);
+        assertEquals(review, review1);
+    }
+
+    //mutation kill
+    @Test
+    @DisplayName("Two different reviews are not equal")
+    public void TwiDifferentReviewAreNotEqual()
+    {
+        Review review = new Review("Nice album",9);
+        Review review1 = new Review("Nice album",8);
+        assertNotEquals(review, review1);
+    }
+
+    //mutation kill
+    @Test
+    @DisplayName("Review is equal to itself")
+    public void reviewIsEqualToItself()
+    {
+        assertEquals(review, review);
+    }
+
+    //mutation kill
+    @Test
+    @DisplayName("Review with same album review and rating mean same review")
+    public void reviewCannotBeEqualToNull()
+    {
+        Review review = new Review("Nice album",9);
+        assertNotEquals(review, null);
+    }
+
+    //mutation kill
+    @Test
+    @DisplayName("Review cannot be equal to musical instrument")
+    public void reviewCannotBeEqualToMusicalInstrument()
+    {
+        Review review = new Review("Nice album",9);
+        MusicalInstrument musicalInstrument = new MusicalInstrument("Piano");
+        assertNotEquals(review,musicalInstrument);
+    }
+
+    //mutation kill
+    @ParameterizedTest
+    @ValueSource(ints = {1,10})
+    @DisplayName("ratingIs1Or10")
+    public void ratingIs1Or10(int a)
+    {
+        review.setRating(a);
+        assertEquals(a,review.getRating());
+    }
 }

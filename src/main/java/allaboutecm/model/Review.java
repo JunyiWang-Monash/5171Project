@@ -60,7 +60,7 @@ public class Review extends Entity{
     public void setWebsiteURL(URL musicalURL)  throws IOException {
         notNull(musicalURL);
         HttpURLConnection connection = (HttpURLConnection) musicalURL.openConnection();
-        connection.setRequestMethod("GET");
+        //connection.setRequestMethod("GET");
         int responseCode = connection.getResponseCode();
         if (responseCode == 200)
             this.websiteURL = musicalURL;

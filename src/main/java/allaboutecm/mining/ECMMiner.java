@@ -49,7 +49,6 @@ public class ECMMiner {
             int instrument = musicianInstrument.getMusicalInstruments().size();
             musicianInstrumentMap.put(instrument,musician);
         }
-        List<Musician> result1 = Lists.newArrayList();
         return socialComplexity(musicianInstrumentMap,k);
     }
 

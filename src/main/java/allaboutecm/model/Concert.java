@@ -3,7 +3,6 @@ package allaboutecm.model;
 import jdk.nashorn.internal.objects.annotations.Property;
 import org.neo4j.ogm.annotation.Relationship;
 
-import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 

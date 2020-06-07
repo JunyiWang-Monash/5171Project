@@ -95,5 +95,12 @@ public class TrackUnitTest {
         assertEquals("Track number cannot be zero or negative",e.getMessage());
     }
 
+    @Test
+    @DisplayName("Test set zero track number")
+    public void testSetValidTrackNumber(){
+        track.setTrackNumber(2);
+        assertEquals(2,track.getTrackNumber());
+    }
+
 
 }

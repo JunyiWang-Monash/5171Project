@@ -104,10 +104,7 @@ public class ECMMiner {
             }
             nameMap.put(value,musician);
         }
-
-        List<Musician> result1 = socialComplexity(nameMap,k);
-
-        /*For Shivani
+        List<Musician> result1 = Lists.newArrayList();
         List<Integer> sortedKeys1 = Lists.newArrayList(nameMap.keySet());
         sortedKeys1.sort(Ordering.natural().reverse());
         for (Integer count : sortedKeys1) {
@@ -118,7 +115,7 @@ public class ECMMiner {
                 } else
                     result1.add(musician2);
             }
-         */
+        }
         return result1;
     }
 
@@ -192,7 +189,6 @@ public class ECMMiner {
             sales = album.getSales();
             albumMap.put(sales,album);
         }
-        List<Album> result1 = avoidDuplicate(albumMap,k);
 
         /*For Shivani
         List<Integer> sortedKeys1 = Lists.newArrayList(albumMap.keySet());
@@ -209,7 +205,7 @@ public class ECMMiner {
                     result1.add(album);
             }
         }*/
-        return result1;
+        return avoidDuplicate(albumMap,k);
     }
 
     public List<Album> avoidDuplicate(ListMultimap<Integer, Album> albumMap, int k)
@@ -256,7 +252,6 @@ public class ECMMiner {
             averageRating = rating/count;
             albumMap.put(averageRating,album);
         }
-        List<Album> result1 = avoidDuplicate(albumMap,k);
         /*For Shivani
         List<Integer> sortedKeys1 = Lists.newArrayList(albumMap.keySet());
         sortedKeys1.sort(Ordering.natural().reverse());
@@ -272,7 +267,7 @@ public class ECMMiner {
                     result1.add(album);
             }
         }*/
-        return result1;
+        return avoidDuplicate(albumMap,k);
     }
 
     /**
@@ -301,25 +296,6 @@ public class ECMMiner {
             }
             similarMap.put(count,album);
         }
-        List<Album> result1 = similarCognitive(similarMap,k);
-        /*
-        List<Integer> sortedKeys1 = Lists.newArrayList(similarMap.keySet());
-        sortedKeys1.sort(Ordering.natural().reverse());
-        for (Integer similar : sortedKeys1) {
-            List<Album> albums12 = similarMap.get(similar);
-            for(Album albumz:albums12){
-                if(result1.size()>=k)
-                {
-                    break;
-                }
-                else
-                    result1.add(albumz);
-            }
-        }*/
-        return result1;
-    }
-
-    public List<Album> similarCognitive(ListMultimap<Integer, Album> similarMap,int k){
         List<Album> result1 = Lists.newArrayList();
         List<Integer> sortedKeys1 = Lists.newArrayList(similarMap.keySet());
         sortedKeys1.sort(Ordering.natural().reverse());
@@ -336,5 +312,26 @@ public class ECMMiner {
         }
         return result1;
     }
+
+    /*
+    public List<Album> similarCognitive(ListMultimap<Integer, Album> similarMap,int k){
+        List<Album> result1 = Lists.newArrayList();
+        List<Integer> sortedKeys1 = Lists.newArrayList(similarMap.keySet());
+        sortedKeys1.sort(Ordering.natural().reverse());
+        for (Integer similar : sortedKeys1) {
+            List<Album> albums12 = similarMap.get(similar);
+            for(Album albumz:albums12){
+                if(result1.size()>=k)
+                {
+                    break;
+                }
+                else
+                    result1.add(albumz);
+            }
+        }
+        return result1;
+
+
+    }*/
 
 }

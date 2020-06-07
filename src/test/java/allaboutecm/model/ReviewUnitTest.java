@@ -129,7 +129,7 @@ public class ReviewUnitTest {
     //mutation kill
     @Test
     @DisplayName("Review cannot be equal to musical instrument")
-    public void reviewCannotBeEqualToMusicalInstrument()
+        public void reviewCannotBeEqualToMusicalInstrument()
     {
         Review review = new Review("Nice album",9);
         MusicalInstrument musicalInstrument = new MusicalInstrument("Piano");
